@@ -25,7 +25,7 @@ SECRET_KEY = '_@t4e3m*uhn4vy6r&=-9#x79!@j2@loz_yi43k0p5f0l+g)01u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jcroyere.pythonanywhere.com']
+ALLOWED_HOSTS = ['cpasbanal.pythonanywhere.com', 'jcroyere.pythonanywhere.com']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'lunchy',
 ]
 
@@ -153,7 +153,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/jcroyere/randomlunch/lunchy/lunchy.log',
+            'filename': '/home/cpasbanal/randomlunch/lunchy/lunchy.log',
         },
     },
     'loggers': {

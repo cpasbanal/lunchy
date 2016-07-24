@@ -29605,3 +29605,1084 @@ Traceback (most recent call last):
   File "/home/jcroyere/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
     if response.get('X-Frame-Options') is not None:
 AttributeError: 'str' object has no attribute 'get'
+(0.032) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.009) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'token'); args=('authtoken', 'token')
+(0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'person'); args=('lunchy', 'person')
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'availability'); args=('lunchy', 'availability')
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'appointment'); args=('lunchy', 'appointment')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10)
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'lunchy'; args=('lunchy',)
+(0.020) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params None)
+(0.018) CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.008) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+(0.009) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+(0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+INSERT INTO "django_content_type" ("name", "model", "app_label", "id") SELECT "name", "model", "app_label", "id" FROM "django_content_type__old"; (params [])
+(0.000) INSERT INTO "django_content_type" ("name", "model", "app_label", "id") SELECT "name", "model", "app_label", "id" FROM "django_content_type__old"; args=[]
+DROP TABLE "django_content_type__old"; (params [])
+(0.072) DROP TABLE "django_content_type__old"; args=[]
+CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+(0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.003) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2016-07-24 08:11:49.098600'); args=['contenttypes', '0001_initial', '2016-07-24 08:11:49.098600']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); (params None)
+(0.029) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); args=None
+CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); args=None
+CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+(0.000) CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); args=None
+CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); (params None)
+(0.000) CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); args=None
+CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+(0.000) CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+(0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+(0.000) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); (params [])
+(0.000) CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); args=[]
+CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); (params [])
+(0.000) CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); args=[]
+CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); (params [])
+(0.000) CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); args=[]
+CREATE UNIQUE INDEX "auth_user_groups_user_id_94350c0c_uniq" ON "auth_user_groups" ("user_id", "group_id"); (params [])
+(0.000) CREATE UNIQUE INDEX "auth_user_groups_user_id_94350c0c_uniq" ON "auth_user_groups" ("user_id", "group_id"); args=[]
+CREATE INDEX "auth_user_groups_e8701ad4" ON "auth_user_groups" ("user_id"); (params [])
+(0.000) CREATE INDEX "auth_user_groups_e8701ad4" ON "auth_user_groups" ("user_id"); args=[]
+CREATE INDEX "auth_user_groups_0e939a4f" ON "auth_user_groups" ("group_id"); (params [])
+(0.000) CREATE INDEX "auth_user_groups_0e939a4f" ON "auth_user_groups" ("group_id"); args=[]
+CREATE UNIQUE INDEX "auth_user_user_permissions_user_id_14a6b632_uniq" ON "auth_user_user_permissions" ("user_id", "permission_id"); (params [])
+(0.000) CREATE UNIQUE INDEX "auth_user_user_permissions_user_id_14a6b632_uniq" ON "auth_user_user_permissions" ("user_id", "permission_id"); args=[]
+CREATE INDEX "auth_user_user_permissions_e8701ad4" ON "auth_user_user_permissions" ("user_id"); (params [])
+(0.000) CREATE INDEX "auth_user_user_permissions_e8701ad4" ON "auth_user_user_permissions" ("user_id"); args=[]
+CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); (params [])
+(0.000) CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.008) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.020) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2016-07-24 08:11:49.291694'); args=['auth', '0001_initial', '2016-07-24 08:11:49.291694']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params None)
+(0.024) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); args=None
+CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+(0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+(0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.015) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.026) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2016-07-24 08:11:49.462709'); args=['admin', '0001_initial', '2016-07-24 08:11:49.462709']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; (params [])
+(0.035) ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; args=[]
+CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "action_time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "action_time" datetime NOT NULL); args=None
+INSERT INTO "django_admin_log" ("user_id", "object_id", "id", "change_message", "object_repr", "action_flag", "action_time", "content_type_id") SELECT "user_id", "object_id", "id", "change_message", "object_repr", "action_flag", "action_time", "content_type_id" FROM "django_admin_log__old"; (params [])
+(0.000) INSERT INTO "django_admin_log" ("user_id", "object_id", "id", "change_message", "object_repr", "action_flag", "action_time", "content_type_id") SELECT "user_id", "object_id", "id", "change_message", "object_repr", "action_flag", "action_time", "content_type_id" FROM "django_admin_log__old"; args=[]
+DROP TABLE "django_admin_log__old"; (params [])
+(0.000) DROP TABLE "django_admin_log__old"; args=[]
+CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+(0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+(0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.028) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.035) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2016-07-24 08:11:49.697490'); args=['admin', '0002_logentry_remove_auto_add', '2016-07-24 08:11:49.697490']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+(0.028) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); (params None)
+(0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); args=None
+INSERT INTO "django_content_type" ("name", "model", "app_label", "id") SELECT "name", "model", "app_label", "id" FROM "django_content_type__old"; (params [])
+(0.000) INSERT INTO "django_content_type" ("name", "model", "app_label", "id") SELECT "name", "model", "app_label", "id" FROM "django_content_type__old"; args=[]
+DROP TABLE "django_content_type__old"; (params [])
+(0.000) DROP TABLE "django_content_type__old"; args=[]
+CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+(0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+(0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+INSERT INTO "django_content_type" ("model", "app_label", "id") SELECT "model", "app_label", "id" FROM "django_content_type__old"; (params [])
+(0.000) INSERT INTO "django_content_type" ("model", "app_label", "id") SELECT "model", "app_label", "id" FROM "django_content_type__old"; args=[]
+DROP TABLE "django_content_type__old"; (params [])
+(0.000) DROP TABLE "django_content_type__old"; args=[]
+CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+(0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.015) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.026) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2016-07-24 08:11:49.982634'); args=['contenttypes', '0002_remove_content_type_name', '2016-07-24 08:11:49.982634']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; (params [])
+(0.058) ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; args=[]
+CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); args=None
+INSERT INTO "auth_permission" ("name", "id", "codename", "content_type_id") SELECT "name", "id", "codename", "content_type_id" FROM "auth_permission__old"; (params [])
+(0.000) INSERT INTO "auth_permission" ("name", "id", "codename", "content_type_id") SELECT "name", "id", "codename", "content_type_id" FROM "auth_permission__old"; args=[]
+DROP TABLE "auth_permission__old"; (params [])
+(0.001) DROP TABLE "auth_permission__old"; args=[]
+CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+(0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+(0.000) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.039) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.025) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2016-07-24 08:11:50.207409'); args=['auth', '0002_alter_permission_name_max_length', '2016-07-24 08:11:50.207409']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+(0.011) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); args=None
+INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; (params [])
+(0.000) INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; args=[]
+DROP TABLE "auth_user__old"; (params [])
+(0.001) DROP TABLE "auth_user__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.014) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.022) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2016-07-24 08:11:50.422699'); args=['auth', '0003_alter_user_email_max_length', '2016-07-24 08:11:50.422699']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+(0.030) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; (params [])
+(0.000) INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; args=[]
+DROP TABLE "auth_user__old"; (params [])
+(0.000) DROP TABLE "auth_user__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.024) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.030) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0004_alter_user_username_opts', '2016-07-24 08:11:50.614291'); args=['auth', '0004_alter_user_username_opts', '2016-07-24 08:11:50.614291']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+(0.032) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); args=None
+INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; (params [])
+(0.000) INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; args=[]
+DROP TABLE "auth_user__old"; (params [])
+(0.000) DROP TABLE "auth_user__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.020) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.027) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0005_alter_user_last_login_null', '2016-07-24 08:11:50.829449'); args=['auth', '0005_alter_user_last_login_null', '2016-07-24 08:11:50.829449']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.023) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.029) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0006_require_contenttypes_0002', '2016-07-24 08:11:50.919374'); args=['auth', '0006_require_contenttypes_0002', '2016-07-24 08:11:50.919374']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+(0.074) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; (params [])
+(0.000) INSERT INTO "auth_user" ("email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff") SELECT "email", "first_name", "is_active", "username", "date_joined", "password", "last_login", "id", "is_superuser", "last_name", "is_staff" FROM "auth_user__old"; args=[]
+DROP TABLE "auth_user__old"; (params [])
+(0.000) DROP TABLE "auth_user__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.024) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.027) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0007_alter_validators_add_error_messages', '2016-07-24 08:11:51.177517'); args=['auth', '0007_alter_validators_add_error_messages', '2016-07-24 08:11:51.177517']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id")); (params None)
+(0.025) CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id")); args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.017) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.031) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('authtoken', '0001_initial', '2016-07-24 08:11:51.385504'); args=['authtoken', '0001_initial', '2016-07-24 08:11:51.385504']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; (params [])
+(0.030) ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; args=[]
+CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id"), "created" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id"), "created" datetime NOT NULL); args=None
+INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; (params [])
+(0.000) INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; args=[]
+DROP TABLE "authtoken_token__old"; (params [])
+(0.000) DROP TABLE "authtoken_token__old"; args=[]
+ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; (params [])
+(0.000) ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; args=[]
+CREATE TABLE "authtoken_token" ("created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id"), "key" varchar(40) NOT NULL PRIMARY KEY); (params None)
+(0.000) CREATE TABLE "authtoken_token" ("created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id"), "key" varchar(40) NOT NULL PRIMARY KEY); args=None
+INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; (params [])
+(0.000) INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; args=[]
+DROP TABLE "authtoken_token__old"; (params [])
+(0.000) DROP TABLE "authtoken_token__old"; args=[]
+ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; (params [])
+(0.000) ALTER TABLE "authtoken_token" RENAME TO "authtoken_token__old"; args=[]
+CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id")); (params None)
+(0.000) CREATE TABLE "authtoken_token" ("key" varchar(40) NOT NULL PRIMARY KEY, "created" datetime NOT NULL, "user_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id")); args=None
+INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; (params [])
+(0.000) INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT "key", "user_id", "created" FROM "authtoken_token__old"; args=[]
+DROP TABLE "authtoken_token__old"; (params [])
+(0.000) DROP TABLE "authtoken_token__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.014) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.010) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('authtoken', '0002_auto_20160226_1747', '2016-07-24 08:11:51.734221'); args=['authtoken', '0002_auto_20160226_1747', '2016-07-24 08:11:51.734221']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NOT NULL, "detail" varchar(1000) NOT NULL); (params None)
+(0.003) CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NOT NULL, "detail" varchar(1000) NOT NULL); args=None
+CREATE TABLE "lunchy_availability" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL); (params None)
+(0.000) CREATE TABLE "lunchy_availability" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL); args=None
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "detail" varchar(1000) NOT NULL); (params None)
+(0.000) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "detail" varchar(1000) NOT NULL); args=None
+ALTER TABLE "lunchy_availability" RENAME TO "lunchy_availability__old"; (params [])
+(0.000) ALTER TABLE "lunchy_availability" RENAME TO "lunchy_availability__old"; args=[]
+CREATE TABLE "lunchy_availability" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "person_id" integer NOT NULL REFERENCES "lunchy_person" ("id")); (params None)
+(0.000) CREATE TABLE "lunchy_availability" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "person_id" integer NOT NULL REFERENCES "lunchy_person" ("id")); args=None
+INSERT INTO "lunchy_availability" ("id", "person_id", "lunch_date") SELECT "id", NULL, "lunch_date" FROM "lunchy_availability__old"; (params [])
+(0.000) INSERT INTO "lunchy_availability" ("id", "person_id", "lunch_date") SELECT "id", NULL, "lunch_date" FROM "lunchy_availability__old"; args=[]
+DROP TABLE "lunchy_availability__old"; (params [])
+(0.002) DROP TABLE "lunchy_availability__old"; args=[]
+CREATE INDEX "lunchy_availability_a8452ca7" ON "lunchy_availability" ("person_id"); (params [])
+(0.000) CREATE INDEX "lunchy_availability_a8452ca7" ON "lunchy_availability" ("person_id"); args=[]
+CREATE TABLE "lunchy_appointment_persons" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "appointment_id" integer NOT NULL REFERENCES "lunchy_appointment" ("id"), "person_id" integer NOT NULL REFERENCES "lunchy_person" ("id")); (params None)
+(0.000) CREATE TABLE "lunchy_appointment_persons" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "appointment_id" integer NOT NULL REFERENCES "lunchy_appointment" ("id"), "person_id" integer NOT NULL REFERENCES "lunchy_person" ("id")); args=None
+CREATE UNIQUE INDEX "lunchy_appointment_persons_appointment_id_c108c533_uniq" ON "lunchy_appointment_persons" ("appointment_id", "person_id"); (params [])
+(0.000) CREATE UNIQUE INDEX "lunchy_appointment_persons_appointment_id_c108c533_uniq" ON "lunchy_appointment_persons" ("appointment_id", "person_id"); args=[]
+CREATE INDEX "lunchy_appointment_persons_54c91d3b" ON "lunchy_appointment_persons" ("appointment_id"); (params [])
+(0.000) CREATE INDEX "lunchy_appointment_persons_54c91d3b" ON "lunchy_appointment_persons" ("appointment_id"); args=[]
+CREATE INDEX "lunchy_appointment_persons_a8452ca7" ON "lunchy_appointment_persons" ("person_id"); (params [])
+(0.000) CREATE INDEX "lunchy_appointment_persons_a8452ca7" ON "lunchy_appointment_persons" ("person_id"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.019) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.031) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0001_initial', '2016-07-24 08:11:51.969505'); args=['lunchy', '0001_initial', '2016-07-24 08:11:51.969505']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; (params [])
+(0.019) ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; args=[]
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "bio" varchar(1000) NOT NULL); (params None)
+(0.000) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "bio" varchar(1000) NOT NULL); args=None
+INSERT INTO "lunchy_person" ("bio", "id", "nickname") SELECT "detail", "id", "nickname" FROM "lunchy_person__old"; (params [])
+(0.000) INSERT INTO "lunchy_person" ("bio", "id", "nickname") SELECT "detail", "id", "nickname" FROM "lunchy_person__old"; args=[]
+DROP TABLE "lunchy_person__old"; (params [])
+(0.000) DROP TABLE "lunchy_person__old"; args=[]
+ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; (params [])
+(0.000) ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; args=[]
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "bio" varchar(1000) NOT NULL, "email" varchar(254) NOT NULL); (params None)
+(0.011) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "bio" varchar(1000) NOT NULL, "email" varchar(254) NOT NULL); args=None
+INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", 'user@domain.com', "nickname" FROM "lunchy_person__old"; (params [])
+(0.000) INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", 'user@domain.com', "nickname" FROM "lunchy_person__old"; args=[]
+DROP TABLE "lunchy_person__old"; (params [])
+(0.000) DROP TABLE "lunchy_person__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.014) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0002_auto_20160717_0930', '2016-07-24 08:11:52.159029'); args=['lunchy', '0002_auto_20160717_0930', '2016-07-24 08:11:52.159029']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; (params [])
+(0.014) ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; args=[]
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "email" varchar(254) NOT NULL, "bio" varchar(1000) NULL); (params None)
+(0.000) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL, "email" varchar(254) NOT NULL, "bio" varchar(1000) NULL); args=None
+INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; (params [])
+(0.000) INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; args=[]
+DROP TABLE "lunchy_person__old"; (params [])
+(0.000) DROP TABLE "lunchy_person__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.010) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.009) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0003_auto_20160717_1011', '2016-07-24 08:11:52.298510'); args=['lunchy', '0003_auto_20160717_1011', '2016-07-24 08:11:52.298510']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; (params [])
+(0.032) ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; args=[]
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "bio" varchar(1000) NULL, "email" varchar(254) NOT NULL, "nickname" varchar(200) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "bio" varchar(1000) NULL, "email" varchar(254) NOT NULL, "nickname" varchar(200) NOT NULL UNIQUE); args=None
+INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; (params [])
+(0.000) INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; args=[]
+DROP TABLE "lunchy_person__old"; (params [])
+(0.000) DROP TABLE "lunchy_person__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.014) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.008) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0004_auto_20160717_1256', '2016-07-24 08:11:52.429090'); args=['lunchy', '0004_auto_20160717_1256', '2016-07-24 08:11:52.429090']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; (params [])
+(0.019) ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; args=[]
+CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NOT NULL, "detail" varchar(1000) NULL); (params None)
+(0.000) CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NOT NULL, "detail" varchar(1000) NULL); args=None
+INSERT INTO "lunchy_appointment" ("detail", "id", "place", "lunch_date") SELECT "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; (params [])
+(0.000) INSERT INTO "lunchy_appointment" ("detail", "id", "place", "lunch_date") SELECT "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; args=[]
+DROP TABLE "lunchy_appointment__old"; (params [])
+(0.000) DROP TABLE "lunchy_appointment__old"; args=[]
+ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; (params [])
+(0.000) ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; args=[]
+CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "detail" varchar(1000) NULL, "place" varchar(1000) NULL); (params None)
+(0.000) CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "detail" varchar(1000) NULL, "place" varchar(1000) NULL); args=None
+INSERT INTO "lunchy_appointment" ("detail", "id", "place", "lunch_date") SELECT "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; (params [])
+(0.000) INSERT INTO "lunchy_appointment" ("detail", "id", "place", "lunch_date") SELECT "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; args=[]
+DROP TABLE "lunchy_appointment__old"; (params [])
+(0.000) DROP TABLE "lunchy_appointment__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.022) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0005_auto_20160720_1533', '2016-07-24 08:11:52.576104'); args=['lunchy', '0005_auto_20160720_1533', '2016-07-24 08:11:52.576104']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; (params [])
+(0.006) ALTER TABLE "lunchy_appointment" RENAME TO "lunchy_appointment__old"; args=[]
+CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NULL, "detail" varchar(1000) NULL, "google_id" varchar(1000) NULL); (params None)
+(0.000) CREATE TABLE "lunchy_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "lunch_date" date NOT NULL, "place" varchar(1000) NULL, "detail" varchar(1000) NULL, "google_id" varchar(1000) NULL); args=None
+INSERT INTO "lunchy_appointment" ("google_id", "detail", "id", "place", "lunch_date") SELECT NULL, "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; (params [])
+(0.001) INSERT INTO "lunchy_appointment" ("google_id", "detail", "id", "place", "lunch_date") SELECT NULL, "detail", "id", "place", "lunch_date" FROM "lunchy_appointment__old"; args=[]
+DROP TABLE "lunchy_appointment__old"; (params [])
+(0.001) DROP TABLE "lunchy_appointment__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.008) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0006_appointment_google_id', '2016-07-24 08:11:52.733290'); args=['lunchy', '0006_appointment_google_id', '2016-07-24 08:11:52.733290']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; (params [])
+(0.008) ALTER TABLE "lunchy_person" RENAME TO "lunchy_person__old"; args=[]
+CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL UNIQUE, "email" varchar(254) NOT NULL, "bio" varchar(1000) NULL); (params None)
+(0.000) CREATE TABLE "lunchy_person" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nickname" varchar(200) NOT NULL UNIQUE, "email" varchar(254) NOT NULL, "bio" varchar(1000) NULL); args=None
+INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; (params [])
+(0.000) INSERT INTO "lunchy_person" ("bio", "id", "email", "nickname") SELECT "bio", "id", "email", "nickname" FROM "lunchy_person__old"; args=[]
+DROP TABLE "lunchy_person__old"; (params [])
+(0.000) DROP TABLE "lunchy_person__old"; args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.006) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.006) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('lunchy', '0007_auto_20160723_0847', '2016-07-24 08:11:52.830762'); args=['lunchy', '0007_auto_20160723_0847', '2016-07-24 08:11:52.830762']
+(0.000) PRAGMA foreign_keys; args=None
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params None)
+(0.041) CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); args=None
+CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); (params [])
+(0.000) CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); args=[]
+(0.000) PRAGMA foreign_keys = 0; args=None
+(0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.006) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sessions', '0001_initial', '2016-07-24 08:11:52.950232'); args=['sessions', '0001_initial', '2016-07-24 08:11:52.950232']
+(0.027) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.000) BEGIN; args=None
+(0.005) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('admin', 'logentry'); args=['admin', 'logentry']
+(0.007) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) BEGIN; args=None
+(0.013) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add log entry', 1, 'add_logentry' UNION ALL SELECT 'Can change log entry', 1, 'change_logentry' UNION ALL SELECT 'Can delete log entry', 1, 'delete_logentry'; args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry')
+(0.004) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.004) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.000) BEGIN; args=None
+(0.005) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'permission'); args=['auth', 'permission']
+(0.011) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+(0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+(0.000) BEGIN; args=None
+(0.005) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'group'); args=['auth', 'group']
+(0.009) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+(0.009) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+(0.000) BEGIN; args=None
+(0.037) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'user'); args=['auth', 'user']
+(0.039) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) BEGIN; args=None
+(0.015) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add permission', 2, 'add_permission' UNION ALL SELECT 'Can change permission', 2, 'change_permission' UNION ALL SELECT 'Can delete permission', 2, 'delete_permission' UNION ALL SELECT 'Can add group', 3, 'add_group' UNION ALL SELECT 'Can change group', 3, 'change_group' UNION ALL SELECT 'Can delete group', 3, 'delete_group' UNION ALL SELECT 'Can add user', 4, 'add_user' UNION ALL SELECT 'Can change user', 4, 'change_user' UNION ALL SELECT 'Can delete user', 4, 'delete_user'; args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user')
+(0.032) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.015) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+(0.042) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+(0.000) BEGIN; args=None
+(0.040) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
+(0.005) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) BEGIN; args=None
+(0.009) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add content type', 5, 'add_contenttype' UNION ALL SELECT 'Can change content type', 5, 'change_contenttype' UNION ALL SELECT 'Can delete content type', 5, 'delete_contenttype'; args=('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype')
+(0.015) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.033) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.023) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.000) BEGIN; args=None
+(0.030) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sessions', 'session'); args=['sessions', 'session']
+(0.009) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) BEGIN; args=None
+(0.025) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add session', 6, 'add_session' UNION ALL SELECT 'Can change session', 6, 'change_session' UNION ALL SELECT 'Can delete session', 6, 'delete_session'; args=('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session')
+(0.023) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.040) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'token' AND "django_content_type"."app_label" = 'authtoken'); args=('token', 'authtoken')
+(0.024) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'token' AND "django_content_type"."app_label" = 'authtoken'); args=('token', 'authtoken')
+(0.000) BEGIN; args=None
+(0.034) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('authtoken', 'token'); args=['authtoken', 'token']
+(0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.000) BEGIN; args=None
+(0.005) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add Token', 7, 'add_token' UNION ALL SELECT 'Can change Token', 7, 'change_token' UNION ALL SELECT 'Can delete Token', 7, 'delete_token'; args=('Can add Token', 7, 'add_token', 'Can change Token', 7, 'change_token', 'Can delete Token', 7, 'delete_token')
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'person' AND "django_content_type"."app_label" = 'lunchy'); args=('person', 'lunchy')
+(0.013) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'person' AND "django_content_type"."app_label" = 'lunchy'); args=('person', 'lunchy')
+(0.000) BEGIN; args=None
+(0.005) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('lunchy', 'person'); args=['lunchy', 'person']
+(0.027) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'availability' AND "django_content_type"."app_label" = 'lunchy'); args=('availability', 'lunchy')
+(0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'availability' AND "django_content_type"."app_label" = 'lunchy'); args=('availability', 'lunchy')
+(0.000) BEGIN; args=None
+(0.015) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('lunchy', 'availability'); args=['lunchy', 'availability']
+(0.023) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'appointment' AND "django_content_type"."app_label" = 'lunchy'); args=('appointment', 'lunchy')
+(0.011) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'appointment' AND "django_content_type"."app_label" = 'lunchy'); args=('appointment', 'lunchy')
+(0.000) BEGIN; args=None
+(0.028) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('lunchy', 'appointment'); args=['lunchy', 'appointment']
+(0.023) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10)
+(0.000) BEGIN; args=None
+(0.013) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add person', 8, 'add_person' UNION ALL SELECT 'Can change person', 8, 'change_person' UNION ALL SELECT 'Can delete person', 8, 'delete_person' UNION ALL SELECT 'Can add availability', 9, 'add_availability' UNION ALL SELECT 'Can change availability', 9, 'change_availability' UNION ALL SELECT 'Can delete availability', 9, 'delete_availability' UNION ALL SELECT 'Can add appointment', 10, 'add_appointment' UNION ALL SELECT 'Can change appointment', 10, 'change_appointment' UNION ALL SELECT 'Can delete appointment', 10, 'delete_appointment'; args=('Can add person', 8, 'add_person', 'Can change person', 8, 'change_person', 'Can delete person', 8, 'delete_person', 'Can add availability', 9, 'add_availability', 'Can change availability', 9, 'change_availability', 'Can delete availability', 9, 'delete_availability', 'Can add appointment', 10, 'add_appointment', 'Can change appointment', 10, 'change_appointment', 'Can delete appointment', 10, 'delete_appointment')
+(0.023) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'lunchy'; args=('lunchy',)
+(0.012) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'cpasbanal'; args=('cpasbanal',)
+(0.023) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'jeremie'; args=('jeremie',)
+(0.000) BEGIN; args=None
+(0.024) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$24000$VCjPAHiCRujn$rfFa4HzFyAGfRP5xPya6PQrv8554XUeBfZt4i03wkDo=', NULL, 1, 'jeremie', '', '', 'jcroyere@gmail.com', 1, 1, '2016-07-24 08:12:33.086684'); args=['pbkdf2_sha256$24000$VCjPAHiCRujn$rfFa4HzFyAGfRP5xPya6PQrv8554XUeBfZt4i03wkDo=', None, True, 'jeremie', '', '', 'jcroyere@gmail.com', True, True, '2016-07-24 08:12:33.086684']
+(0.000) BEGIN; args=None
+(0.030) INSERT INTO "authtoken_token" ("key", "user_id", "created") SELECT '29bda22c9e62fd59ce7ad264b2928b0f7874e752', 1, '2016-07-24 08:12:33.178770'; args=('29bda22c9e62fd59ce7ad264b2928b0f7874e752', 1, '2016-07-24 08:12:33.178770')
+(0.012) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.030) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.024) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.006) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.035) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.030) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.010) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.015) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.007) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.028) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.020) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.007) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.012) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.014) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.010) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'token'); args=('authtoken', 'token')
+(0.029) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.005) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'person'); args=('lunchy', 'person')
+(0.007) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'availability'); args=('lunchy', 'availability')
+(0.011) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'lunchy' AND "django_content_type"."model" = 'appointment'); args=('lunchy', 'appointment')
+(0.011) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10)
+(0.009) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'lunchy'; args=('lunchy',)
+(0.006) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+(0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'token' AND "django_content_type"."app_label" = 'authtoken'); args=('token', 'authtoken')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'person' AND "django_content_type"."app_label" = 'lunchy'); args=('person', 'lunchy')
+(0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'availability' AND "django_content_type"."app_label" = 'lunchy'); args=('availability', 'lunchy')
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'appointment' AND "django_content_type"."app_label" = 'lunchy'); args=('appointment', 'lunchy')
+(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10)
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'lunchy'; args=('lunchy',)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'jeremie'; args=('jeremie',)
+(0.003) SELECT "lunchy_availability"."id", "lunchy_availability"."lunch_date", "lunchy_availability"."person_id" FROM "lunchy_availability" INNER JOIN "lunchy_person" ON ("lunchy_availability"."person_id" = "lunchy_person"."id") WHERE "lunchy_person"."nickname" = 'jo'; args=('jo',)
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+(0.006) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'jeremie'; args=('jeremie',)
+(0.003) SELECT "lunchy_availability"."id", "lunchy_availability"."lunch_date", "lunchy_availability"."person_id" FROM "lunchy_availability" INNER JOIN "lunchy_person" ON ("lunchy_availability"."person_id" = "lunchy_person"."id") WHERE "lunchy_person"."nickname" = 'jo'; args=('jo',)
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email" FROM "lunchy_person" WHERE "lunchy_person"."id" = 14; args=(14,)
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/rest_framework/js/jquery-1.12.4.min.js', 'tried': [[<RegexURLResolver <module 'rest_framework.urls' from '/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'lunchy.urls' from '/home/cpasbanal/randomlunch/lunchy/urls.py'> (None:None) ^lunchy/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
