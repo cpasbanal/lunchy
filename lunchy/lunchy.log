@@ -30686,3 +30686,592 @@ Traceback (most recent call last):
   File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/template/base.py", line 905, in _resolve_lookup
     (bit, current))  # missing attribute
 django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/request.py", line 359, in __getattribute__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 18, in chat_message
+    assert request.form.get('token') == SLACK_BOT_TOKEN
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/request.py", line 361, in __getattribute__
+    six.reraise(info[0], info[1], info[2].tb_next)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+AttributeError: 'Request' object has no attribute 'form'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7f16eff90550>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 27, in chat_message
+    assert request['token'] == SLACK_TOKEN
+TypeError: 'Request' object is not subscriptable
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.015) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7fb6a3c0f550>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 27, in chat_message
+    assert request.POST['token'] == SLACK_TOKEN
+AssertionError
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.007) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7f5e8fd8f550>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7fa85f8ca550>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7fe0097ec550>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7fe0097f9208>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/request.py", line 359, in __getattribute__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 32, in chat_message
+    json_message = 'You said {}'.format(request.form.get('text', 'nothing'))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/request.py", line 361, in __getattribute__
+    six.reraise(info[0], info[1], info[2].tb_next)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+AttributeError: 'Request' object has no attribute 'form'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.005) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7f8b14ac7550>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 32, in chat_message
+    json_message = 'You said {}'.format(request.POST('text'))
+TypeError: 'QueryDict' object is not callable
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <rest_framework.request.Request object at 0x7f6d552fe550>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <QueryDict: {'text': ['just a test'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+(0.006) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <QueryDict: {'text': ['just a test'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Forbidden (CSRF cookie not set.): /lunchy/api/v1/message/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.007) SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") WHERE "authtoken_token"."key" = '4c39ba1941d806d9cc4baba1a9c6feeecb587bdc'; args=('4c39ba1941d806d9cc4baba1a9c6feeecb587bdc',)
+chat_message was called
+This is the request data: <QueryDict: {'text': ['just a test'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Forbidden (CSRF cookie not set.): /lunchy/api/v1/message/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Forbidden (CSRF cookie not set.): /lunchy/api/v1/message/
+Forbidden (CSRF cookie not set.): /lunchy/api/v1/message/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['just a test'], 'user_name': ['max']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'team_id': ['T03JDK6SM'], 'channel_id': ['C1UJPS91Q'], 'timestamp': ['1469364439.000024'], 'user_name': ['jeremie'], 'team_domain': ['crms'], 'user_id': ['U03JE3HVD'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['here it goes'], 'service_id': ['62630855313']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364440.000025'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364441.000026'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364441.000027'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364442.000028'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364442.000029'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364442.000030'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364443.000031'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364443.000032'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364444.000033'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364444.000034'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364445.000035'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364445.000036'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364445.000037'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364446.000038'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364446.000039'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364446.000040'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364447.000041'], 'user_name': ['slackbot'], 'team_domain': ['crms'], 'text': ['You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said You said here it goes'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364473.000043'], 'channel_id': ['C1UJPS91Q'], 'team_id': ['T03JDK6SM'], 'user_name': ['jeremie'], 'text': ['paye ta boucle infinie...'], 'user_id': ['U03JE3HVD'], 'service_id': ['62630855313'], 'channel_name': ['lunchybot_tests'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364475.000044'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364475.000045'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364475.000046'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364476.000047'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364476.000048'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364477.000049'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364478.000050'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364478.000051'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364479.000052'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'bot_name': [''], 'timestamp': ['1469364479.000053'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'user_name': ['slackbot'], 'text': ['You said You said You said You said You said You said You said You said You said You said paye ta boucle infinie...'], 'channel_name': ['lunchybot_tests'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'service_id': ['62630855313'], 'timestamp': ['1469364546.000055'], 'user_name': ['jeremie'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'team_id': ['T03JDK6SM'], 'team_domain': ['crms'], 'user_id': ['U03JE3HVD'], 'text': ['and there?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364547.000056'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ['You said and there?'], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364548.000057'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364550.000058'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364550.000059'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364551.000060'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364552.000061'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364552.000062'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364553.000063'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364554.000064'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364554.000065'], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'bot_id': ['B1UJJR597'], 'service_id': ['62630855313'], 'text': ["didn't work sorry"], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['USLACKBOT']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364641.000067'], 'user_id': ['U03JE3HVD'], 'text': ['there?'], 'service_id': ['62630855313'], 'user_name': ['jeremie'], 'team_domain': ['crms'], 'channel_id': ['C1UJPS91Q'], 'channel_name': ['lunchybot_tests'], 'team_id': ['T03JDK6SM'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+not the same user_name
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469364643.000068'], 'bot_name': [''], 'service_id': ['62630855313'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT'], 'text': ['You said there?'], 'user_name': ['slackbot'], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'bot_id': ['B1UJJR597'], 'team_id': ['T03JDK6SM'], 'channel_name': ['lunchybot_tests']}>
+posted token: jiGg6v1HO1wTaJHsKQJ00w40
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'channel_name': ['lunchybot_tests'], 'text': ['What is the weather in Rome?'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'timestamp': ['1469365551.000069'], 'user_name': ['jeremie'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['U03JE3HVD']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 33, in chat_message
+    json_message = wit_chat("1", request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 59, in wit_chat
+    new_context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 85, in __run_actions
+    json = self.converse(session_id, message, context, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 79, in converse
+    resp = req(self.logger, self.access_token, 'POST', '/converse', params, json=context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 31, in req
+    ' (' + rsp.reason + ')')
+wit.wit.WitError: Wit responded with status: 400 (Bad Request)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'

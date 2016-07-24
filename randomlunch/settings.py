@@ -25,8 +25,9 @@ SECRET_KEY = '_@t4e3m*uhn4vy6r&=-9#x79!@j2@loz_yi43k0p5f0l+g)01u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cpasbanal.pythonanywhere.com', 'jcroyere.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['cpasbanal.pythonanywhere.com',
+    'jcroyere.pythonanywhere.com',
+    'api.slack.com']
 
 # Application definition
 
@@ -129,17 +130,19 @@ STATIC_URL = '/static/'
 
 # Parameters for django rest framework
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-        'rest_framework.permissions.IsAuthenticated',
-        # 'rest_framework.permissions.IsAdminUser',
-    ),
-    'PAGE_SIZE': 10
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework.authentication.BasicAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication',
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.AllowAny',
+    #     'rest_framework.permissions.IsAuthenticated',
+    #     # 'rest_framework.permissions.IsAdminUser',
+    # ),
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [],
 }
 
 # Parameters for django debug toolbar

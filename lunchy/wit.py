@@ -1,17 +1,17 @@
-import sys
 from wit import Wit
 
-access_token = "37BV5G3TT3MUDYU7Y27EBV2AEXJGETVL"
+# documentation and examples on the github page
+# https://github.com/wit-ai/pywit
 
-if len(sys.argv) != 2:
-    print('usage: python ' + sys.argv[0] + ' <wit-token>')
-    exit(1)
-access_token = sys.argv[1]
+access_token = "DSMDE3UL77ECC5X7TS2S75EZMANETCIE"
 
-# Quickstart example
-# See https://wit.ai/ar7hur/Quickstart
+# import the logging library
+import logging
+# Get an instance of a logger
+logger = logging.getLogger("lunchy")
 
 def first_entity_value(entities, entity):
+    # find the wanted entity from the wit request
     if entity not in entities:
         return None
     val = entities[entity][0]['value']
@@ -20,9 +20,12 @@ def first_entity_value(entities, entity):
     return val['value'] if isinstance(val, dict) else val
 
 def send(request, response):
+    # print('Sending to user...', response['text'])
     print(response['text'])
 
 def get_forecast(request):
+    # action received from user with context and entities
+    # print('Received from user...', request['text'])
     context = request['context']
     entities = request['entities']
 
@@ -36,10 +39,33 @@ def get_forecast(request):
 
     return context
 
+
+# define all the actions wit can do
 actions = {
     'send': send,
     'getForecast': get_forecast,
 }
 
 client = Wit(access_token=access_token, actions=actions)
-client.interactive()
+
+def wit_chat(session_id, context, text):
+    # Calling high-level API to converse with the bot
+    # session_id = 'my-user-session-42'
+    # context0 = {}
+    # context1 = client.run_actions(session_id, 'what is the weather in London?', context0)
+    # print('The session state is now: ' + str(context1))
+    # context2 = client.run_actions(session_id, 'and in Brussels?', context1)
+    # print('The session state is now: ' + str(context2))
+    new_context = client.run_actions(session_id, text, context)
+    logger.debug("The session state is now: " + str(new_context))
+    return new_context
+
+if __name__ == "__main__":
+    # call the interactive session
+    session_id = 'my-user-session-42'
+    context0 = {}
+    context1 = wit_chat(session_id, "What is the weather in London?", context0)
+    print('The session state is now: ' + str(context1))
+    context2 = client.run_actions(session_id, 'and in Brussels?', context1)
+    print('The session state is now: ' + str(context2))
+    # client.interactive()
