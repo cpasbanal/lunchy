@@ -1,9 +1,9 @@
 from wit import Wit
 
 # import modules used by wit
-from lunchy.subwit.common import first_entity_value
+# from lunchy.subwit.common import first_entity_value
 from lunchy.subwit.forecast import get_forecast
-
+from lunchy.subwit.lunchy import set_availability, update_email
 
 # documentation and examples on the github page
 # https://github.com/wit-ai/pywit
@@ -52,6 +52,8 @@ actions = {
     'send': send,
     'merge': merge,
     'getForecast': get_forecast,
+    'setAvailability': set_availability,
+    'updateEmail': update_email,
 }
 
 client = Wit(access_token=access_token, actions=actions)
@@ -59,12 +61,14 @@ client.logger.setLevel(logging.DEBUG)
 
 def wit_chat(session_id, text, context):
     # Calling high-level API to get the end message we should return to the client
-    session_id = 'my-user-session-42'
+    # session_id = 'my-user-session-42'
+
     logger.debug("** calling run_actions **")
-    context = client.run_actions(session_id, text, context)
+    # logger.debug("Current session: " + str(session_id))
+    context = client.run_actions(session_id, text, context, max_steps=8)
     logger.debug("** after calling run_actions **")
     logger.debug('The session state is now: ' + str(context))
     result["context"] = context
     return result
 
-client.interactive()
+# client.interactive()

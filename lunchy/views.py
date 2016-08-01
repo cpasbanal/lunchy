@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 # import serializers
-from lunchy.serializers import AvailSerializer, PersonSerializer, AppointmentSerializer
+from lunchy.serializers import AvailSerializer, PersonSerializer
 
 # import some useful standard modules
 from datetime import datetime, time

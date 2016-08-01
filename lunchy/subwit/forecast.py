@@ -1,6 +1,7 @@
 # module to query Open Weather Maps to answer "What's the weather?"
 # TODO - add cache to OWM
 # TODO - add id mapping with common cities
+# TODO - add temperature in °C
 
 import dateutil.parser
 
@@ -19,45 +20,51 @@ logger = logging.getLogger("lunchy")
 owm = pyowm.OWM('620667215b058dcedea98a7353174546', # You MUST provide a valid API key
                 language='fr')  # change default answer to fr
 
+# Session
+from importlib import import_module
+from django.conf import settings
+SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
+
 def get_forecast(request):
     # action received from user with context and entities
     # print('Received from user...', request['text'])
     context = request['context']
     entities = request['entities']
+    # session_id = request['session_id']
 
-    # clean up context from previous forecast
-    if context.get('forecast') is not None:
-        del context['forecast']
+    # store all the context information in a specific namespace to avoid conflict
+    if not "weather" in context:
+        context["weather"] = {}
 
-    # Merge entities in context
+    logger.debug("** Get forecast called **")
+    # logger.debug("This is the request received: " + str(request))
+
+    # Merge entities in context (location and date)
     loc = first_entity_value(entities, 'location')
     if loc:
-        context["location"] = loc
-        request.session['weather_location'] = loc
-
+        # logger.debug("location given")
+        context["weather"]["location"] = loc
+        context.pop('missingLocation', None)
     user_date = first_entity_value(entities, 'datetime')
-    logger.debug("This is the datetime: " + str(user_date))
     if user_date:
-        context["datetime"] = user_date
-        request.session['weather_datetime'] = user_date
-
-    logger.debug("This is request: " + str(request))
+        # logger.debug("datetime given")
+        context["weather"]["datetime"] = user_date
+        context.pop('missingDatetime', None)
 
     # If location and date, then return weather
-    if not "location" in context: # no location given
+    if not "location" in context.get("weather", None): # no location given
         logger.debug("No location given and context: " + str(context))
         context['missingLocation'] = True
-    elif not "datetime" in context: # no date given
+    elif not "datetime" in context.get("weather", None): # no date given
         logger.debug("No date given and context: " + str(context))
         context['missingDatetime'] = True
     else:
         logger.debug("Everything is ok and context: " + str(context))
-        # context['forecast'] = 'cloudy'
         # using PyOWM API described at https://github.com/csparpa/pyowm/wiki/Usage-examples
         # get weather forceast for the next 5 days in the required location
-        fc = owm.daily_forecast(context["location"], limit=5)
+        fc = owm.daily_forecast(context["weather"]["location"], limit=5)
         # change when to noon to be more precise (probably asked for midnight otherwise)
-        when = dateutil.parser.parse(context["datetime"])
+        when = dateutil.parser.parse(context["weather"]["datetime"])
         when.replace(hour=12)
         # get the weather for the specific date
         w = fc.get_weather_at(when)
@@ -73,5 +80,7 @@ def get_forecast(request):
         context['forecast'] = status
         context['weather_location'] = precise_loc
 
+        # we answered the client, so delete the previous weather context
+        del context["weather"]
     return context
 

@@ -19,6 +19,8 @@ class Person(models.Model):
     nickname = models.CharField(max_length=200, unique=True)
     bio = models.CharField(max_length=1000, null=True, blank=True)
     email = models.EmailField(default='user@domain.com')
+    # the current session
+    session_key = models.CharField(max_length=40, null=True, blank=True)
 
     def __unicode__(self):
         return self.nickname
