@@ -31275,3 +31275,1868 @@ Traceback (most recent call last):
   File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
     if response.get('X-Frame-Options') is not None:
 AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 33, in chat_message
+    json_message = wit_chat("1", request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 59, in wit_chat
+    new_context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 85, in __run_actions
+    json = self.converse(session_id, message, context, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 79, in converse
+    resp = req(self.logger, self.access_token, 'POST', '/converse', params, json=context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 31, in req
+    ' (' + rsp.reason + ')')
+wit.wit.WitError: Wit responded with status: 400 (Bad Request)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+The session state is now: {'forecast': 'sunny'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['what is the weather in Paris?'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'channel_name': ['lunchybot_tests'], 'user_id': ['U03JE3HVD'], 'timestamp': ['1469366497.000070'], 'channel_id': ['C1UJPS91Q'], 'team_domain': ['crms'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['jeremie']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_id': ['U03JE3HVD'], 'channel_name': ['lunchybot_tests'], 'text': ['what is the weather in Paris?'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'team_domain': ['crms'], 'team_id': ['T03JDK6SM'], 'user_name': ['jeremie'], 'timestamp': ['1469366595.000071']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 34, in chat_message
+    logger.debug("Wit answered: " + json_message)
+TypeError: Can't convert 'dict' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'forecast': 'sunny'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?']}>
+not the same user_name
+Wit answered: {'action': 'getForecast', 'entities': {'intent': [{'confidence': 0.9964765586562633, 'value': 'weather'}], 'location': [{'suggested': True, 'type': 'value', 'confidence': 0.9995748020819859, 'value': 'Rome'}]}, 'type': 'action', 'confidence': 0.017676890207342196}
+Wit answered: {'action': 'getForecast', 'entities': {'intent': [{'confidence': 0.9964765586562633, 'value': 'weather'}], 'location': [{'suggested': True, 'type': 'value', 'confidence': 0.9995748020819859, 'value': 'Rome'}]}, 'type': 'action', 'confidence': 0.017676890207342196}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['jeremie'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['U03JE3HVD'], 'text': ['what is the weather in Paris?'], 'team_id': ['T03JDK6SM'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'timestamp': ['1469366820.000072'], 'team_domain': ['crms'], 'service_id': ['62630855313']}>
+not the same user_name
+Wit answered: {'msg': ' Where?', 'entities': {'intent': [{'confidence': 0.999145983005757, 'value': 'weather'}], 'location': [{'suggested': True, 'type': 'value', 'confidence': 0.9995410058355274, 'value': 'Paris'}]}, 'type': 'msg', 'confidence': 0.012684836273380524}
+Wit answered: {'msg': ' Where?', 'entities': {'intent': [{'confidence': 0.999145983005757, 'value': 'weather'}], 'location': [{'suggested': True, 'type': 'value', 'confidence': 0.9995410058355274, 'value': 'Paris'}]}, 'type': 'msg', 'confidence': 0.012684836273380524}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+Wit answered: {'entities': {'intent': [{'confidence': 0.9964765586562633, 'value': 'weather'}], 'location': [{'confidence': 0.9995748020819859, 'suggested': True, 'value': 'Rome', 'type': 'value'}]}, 'confidence': 0.012984863361378003, 'action': 'getForecast', 'type': 'action'}
+Wit answered: {'entities': {'intent': [{'confidence': 0.9964765586562633, 'value': 'weather'}], 'location': [{'confidence': 0.9995748020819859, 'suggested': True, 'value': 'Rome', 'type': 'value'}]}, 'confidence': 0.012984863361378003, 'action': 'getForecast', 'type': 'action'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'msg': ' Where?', 'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'msg', 'confidence': 0.008473829385319674}
+Wit answered: {'msg': ' Where?', 'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'msg', 'confidence': 0.008473829385319674}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'stop', 'confidence': 0.01077650436603239}
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'stop', 'confidence': 0.01077650436603239}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'action': 'getForecast', 'type': 'action', 'confidence': 0.008776302735569312}
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'action': 'getForecast', 'type': 'action', 'confidence': 0.008776302735569312}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'msg': ' Where?', 'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'msg', 'confidence': 0.0065661480939352215}
+Wit answered: {'msg': ' Where?', 'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'msg', 'confidence': 0.0065661480939352215}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'stop', 'confidence': 0.008784762472480032}
+Wit answered: {'entities': {'location': [{'suggested': True, 'value': 'Rome', 'type': 'value', 'confidence': 0.9995748020819859}], 'intent': [{'value': 'weather', 'confidence': 0.9964765586562633}]}, 'type': 'stop', 'confidence': 0.008784762472480032}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+Wit answered: {'confidence': 1, 'type': 'error', 'entities': {'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'type': 'value', 'suggested': True}], 'intent': [{'value': 'weather', 'confidence': 0.9988986995812099}]}}
+Wit answered: {'confidence': 1, 'type': 'error', 'entities': {'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'type': 'value', 'suggested': True}], 'intent': [{'value': 'weather', 'confidence': 0.9988986995812099}]}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'entities': {'intent': [{'confidence': 0.9988986995812099, 'value': 'weather'}], 'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'type': 'value', 'suggested': True}]}, 'confidence': 1, 'type': 'error'}
+Wit answered: {'entities': {'intent': [{'confidence': 0.9988986995812099, 'value': 'weather'}], 'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'type': 'value', 'suggested': True}]}, 'confidence': 1, 'type': 'error'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Wit answered: {'entities': {'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'suggested': True, 'type': 'value'}], 'intent': [{'value': 'weather', 'confidence': 0.9988986995812099}]}, '_text': 'What is the weather in Rome?', 'msg_id': '437f8d03-41f0-4a2b-96bd-c9c1c3ea36cb'}
+Wit answered: {'entities': {'location': [{'value': 'Rome', 'confidence': 0.9995748020819859, 'suggested': True, 'type': 'value'}], 'intent': [{'value': 'weather', 'confidence': 0.9988986995812099}]}, '_text': 'What is the weather in Rome?', 'msg_id': '437f8d03-41f0-4a2b-96bd-c9c1c3ea36cb'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max'], 'text': ['What is the weather in Rome?']}>
+not the same user_name
+Wit answered: {'_text': 'What is the weather in Rome?', 'entities': {'location': [{'type': 'value', '_start': 23, '_body': 'Rome', 'confidence': 0.9995748020819859, '_entity': 'location', 'value': 'Rome', '_end': 27, 'suggested': True}], 'intent': [{'_entity': 'intent', 'value': 'weather', 'confidence': 0.9988986995812099}]}, 'msg_id': '09ce280d-cc6e-4a07-9806-7ce2a5971458'}
+Wit answered: {'_text': 'What is the weather in Rome?', 'entities': {'location': [{'type': 'value', '_start': 23, '_body': 'Rome', 'confidence': 0.9995748020819859, '_entity': 'location', 'value': 'Rome', '_end': 27, 'suggested': True}], 'intent': [{'_entity': 'intent', 'value': 'weather', 'confidence': 0.9988986995812099}]}, 'msg_id': '09ce280d-cc6e-4a07-9806-7ce2a5971458'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+The session state is now: {'forecast': 'sunny'}
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'forecast': 'sunny'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 33, in chat_message
+    json_message = wit_chat("1", request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 82, in wit_chat
+    return context2
+NameError: name 'context2' is not defined
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'forecast': 'sunny'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+b' The weather will be sunny '
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 33, in chat_message
+    json_message = wit_chat("1", request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 82, in wit_chat
+    context1 = client.run_actions(session_id, 'what is the weather in London?', context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 115, in __run_actions
+    self.actions['send'](request, response)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 28, in send
+    result["msg"] = result["msg"] + "\n" + response['text']
+TypeError: Can't convert 'bytes' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'msg': "\nb' The weather will be sunny '\nb' The weather will be sunny '", 'context': {'forecast': 'sunny'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'msg': "\nb' The weather will be sunny '", 'context': {'forecast': 'sunny'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'context': {'forecast': 'sunny'}, 'msg': "\nb' The weather will be sunny '"}
+chat_message was called
+This is the request data: <QueryDict: {'timestamp': ['1469385637.000002'], 'team_domain': ['crms'], 'text': ['What is the weather in Rome?'], 'user_name': ['jeremie'], 'team_id': ['T03JDK6SM'], 'service_id': ['62630855313'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['U03JE3HVD'], 'channel_name': ['lunchybot_tests']}>
+not the same user_name
+b' The weather will be sunny '
+The session state is now: {'forecast': 'sunny'}
+Wit answered: {'context': {'forecast': 'sunny'}, 'msg': "\nb' The weather will be sunny '\nb' The weather will be sunny '"}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'team_id': ['T03JDK6SM'], 'channel_id': ['C1UJPS91Q'], 'bot_id': ['B1UJJR597'], 'user_id': ['USLACKBOT'], 'user_name': ['slackbot'], 'timestamp': ['1469385639.000003'], 'bot_name': [''], 'channel_name': ['lunchybot_tests'], 'service_id': ['62630855313'], 'team_domain': ['crms'], 'text': ["\nb' The weather will be sunny '\nb' The weather will be sunny '"]}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'team_id': ['T03JDK6SM'], 'channel_name': ['lunchybot_tests'], 'service_id': ['62630855313'], 'user_name': ['jeremie'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['U03JE3HVD'], 'timestamp': ['1469385740.000004'], 'text': ['What is the weather in London?'], 'team_domain': ['crms']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'msg': "\nb' The weather will be cloudy '", 'context': {'forecast': 'cloudy'}}
+chat_message was called
+This is the request data: <QueryDict: {'team_id': ['T03JDK6SM'], 'team_domain': ['crms'], 'channel_id': ['C1UJPS91Q'], 'text': ["\nb' The weather will be cloudy '"], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['slackbot'], 'bot_name': [''], 'channel_name': ['lunchybot_tests'], 'user_id': ['USLACKBOT'], 'service_id': ['62630855313'], 'timestamp': ['1469385742.000005'], 'bot_id': ['B1UJJR597']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?'], 'user_name': ['max']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'context': {'forecast': 'cloudy'}, 'msg': b' The weather will be cloudy '}
+chat_message was called
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'text': ['What is the weather in London?'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['U03JE3HVD'], 'timestamp': ['1469385792.000006'], 'team_id': ['T03JDK6SM'], 'user_name': ['jeremie'], 'channel_name': ['lunchybot_tests']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'context': {'forecast': 'cloudy'}, 'msg': b' The weather will be cloudy '}
+chat_message was called
+This is the request data: <QueryDict: {'service_id': ['62630855313'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'bot_id': ['B1UJJR597'], 'text': [' The weather will be cloudy '], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'timestamp': ['1469385793.000007'], 'team_id': ['T03JDK6SM']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+chat_message was called
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'text': ['and Brussels?'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_id': ['U03JE3HVD'], 'timestamp': ['1469385863.000008'], 'team_id': ['T03JDK6SM'], 'user_name': ['jeremie'], 'channel_name': ['lunchybot_tests']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'context': {'forecast': 'cloudy'}, 'msg': b' The weather will be cloudy '}
+chat_message was called
+This is the request data: <QueryDict: {'service_id': ['62630855313'], 'team_domain': ['crms'], 'user_id': ['USLACKBOT'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'bot_id': ['B1UJJR597'], 'text': [' The weather will be cloudy '], 'bot_name': [''], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'timestamp': ['1469385866.000009'], 'team_id': ['T03JDK6SM']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Annecy?'], 'user_name': ['jeremie'], 'timestamp': ['1469456634.000002'], 'channel_name': ['lunchybot_tests'], 'service_id': ['62630855313'], 'channel_id': ['C1UJPS91Q'], 'user_id': ['U03JE3HVD'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'team_domain': ['crms'], 'team_id': ['T03JDK6SM']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'context': {'forecast': 'cloudy'}, 'msg': b' The weather will be cloudy '}
+chat_message was called
+This is the request data: <QueryDict: {'channel_name': ['lunchybot_tests'], 'bot_id': ['B1UJJR597'], 'channel_id': ['C1UJPS91Q'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': [' The weather will be cloudy '], 'team_domain': ['crms'], 'timestamp': ['1469456638.000003'], 'service_id': ['62630855313'], 'user_id': ['USLACKBOT'], 'bot_name': [''], 'user_name': ['slackbot'], 'team_id': ['T03JDK6SM']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'msg': b' The weather will be cloudy ', 'context': {'forecast': 'cloudy'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'msg': b' The weather will be cloudy ', 'context': {'forecast': 'cloudy'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['And in Brussels?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'msg': b' The weather will be cloudy ', 'context': {'forecast': 'cloudy'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'text': ['And in Paris?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'msg': b' The weather will be cloudy ', 'context': {'forecast': 'cloudy'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 85, in __run_actions
+    json = self.converse(session_id, message, context, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 79, in converse
+    resp = req(self.logger, self.access_token, 'POST', '/converse', params, json=context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 27, in req
+    **kwargs
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/requests/api.py", line 57, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/requests/sessions.py", line 461, in request
+    prep = self.prepare_request(req)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/requests/sessions.py", line 394, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/requests/models.py", line 298, in prepare
+    self.prepare_body(data, files, json)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/requests/models.py", line 424, in prepare_body
+    body = complexjson.dumps(json)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/simplejson/__init__.py", line 380, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/simplejson/encoder.py", line 275, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/simplejson/encoder.py", line 357, in iterencode
+    return _iterencode(o, 0)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/simplejson/encoder.py", line 252, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <pyowm.webapi25.observation.Observation - reception time=2016-07-29 15:20:35+00> is not JSON serializable
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max'], 'text': ['What is the weather in Rome?']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 98, in __run_actions
+    raise WitError('Oops, I don\'t know what to do.')
+wit.wit.WitError: Oops, I don't know what to do.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['What is the weather in Rome?']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 98, in __run_actions
+    raise WitError('Oops, I don\'t know what to do.')
+wit.wit.WitError: Oops, I don't know what to do.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['What is the weather in Rome?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 98, in __run_actions
+    raise WitError('Oops, I don\'t know what to do.')
+wit.wit.WitError: Oops, I don't know what to do.
+chat_message was called
+This is the request data: <QueryDict: {'text': ["What's the weather in Rome?"], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 98, in __run_actions
+    raise WitError('Oops, I don\'t know what to do.')
+wit.wit.WitError: Oops, I don't know what to do.
+chat_message was called
+This is the request data: <QueryDict: {'text': ["What's the weather in Rome?"], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2']}>
+not the same user_name
+This is the weather: <pyowm.webapi25.weather.Weather - reference time=2016-07-29 15:28:55+00, status=Clouds>
+This is the status: partiellement ensoleillé
+b' The weather will be cloudy '
+The session state is now: {'forecast': 'cloudy'}
+Wit answered: {'context': {'forecast': 'cloudy'}, 'msg': b' The weather will be cloudy '}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ["What's the weather in Rome?"], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2']}>
+not the same user_name
+This is the weather: <pyowm.webapi25.weather.Weather - reference time=2016-07-29 15:30:26+00, status=Clouds>
+This is the status: nuageux
+b' The weather will be nuageux '
+The session state is now: {'forecast': 'nuageux'}
+Wit answered: {'context': {'forecast': 'nuageux'}, 'msg': b' The weather will be nuageux '}
+chat_message was called
+This is the request data: <QueryDict: {'text': ["What's the weather in Paris?"], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2']}>
+not the same user_name
+This is the weather: <pyowm.webapi25.weather.Weather - reference time=2016-07-29 15:33:36+00, status=Clouds>
+This is the status: peu nuageux
+b' The weather will be peu nuageux '
+The session state is now: {'forecast': 'peu nuageux'}
+Wit answered: {'context': {'forecast': 'peu nuageux'}, 'msg': b' The weather will be peu nuageux '}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max2'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ["What's the weather in Paris?"]}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 118, in __run_actions
+    self.throw_if_action_missing(action)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 166, in throw_if_action_missing
+    raise WitError('unknown action: ' + action_name)
+wit.wit.WitError: unknown action:  getForecast 
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max2'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps demain à Paris ?']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 98, in __run_actions
+    raise WitError('Oops, I don\'t know what to do.')
+wit.wit.WitError: Oops, I don't know what to do.
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max3'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps demain à Paris ?']}>
+not the same user_name
+This is the status: peu nuageux
+b' Le temps sera peu nuageux '
+The session state is now: {'forecast': 'peu nuageux'}
+Wit answered: {'context': {'forecast': 'peu nuageux'}, 'msg': b' Le temps sera peu nuageux '}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max3'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps demain à Londres ?']}>
+not the same user_name
+This is the status: ensoleillé
+b' Le temps sera ensoleill\xc3\xa9 '
+The session state is now: {'forecast': 'ensoleillé'}
+Wit answered: {'context': {'forecast': 'ensoleillé'}, 'msg': b' Le temps sera ensoleill\xc3\xa9 '}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps demain à Londres ?'], 'user_name': ['max3'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 134, in _ISO8601_to_UNIXtime
+    d = datetime.strptime(iso, '%Y-%m-%d %H:%M:%S+00')
+  File "/usr/lib/python3.5/_strptime.py", line 500, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/usr/lib/python3.5/_strptime.py", line 337, in _strptime
+    (data_string, format))
+ValueError: time data '2016-07-30T00:00:00.000+02:00' does not match format '%Y-%m-%d %H:%M:%S+00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 33, in get_forecast
+    fc.get_weather_at(when)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/webapi25/forecaster.py", line 402, in get_weather_at
+    timeformatutils.to_UNIXtime(timeobject))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 114, in to_UNIXtime
+    return _ISO8601_to_UNIXtime(timeobject)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 137, in _ISO8601_to_UNIXtime
+    'should have been: YYYY-MM-DD HH:MM:SS+00")
+ValueError: pyowm.utils.timeformatutils: bad format for input ISO8601 string, '             'should have been: YYYY-MM-DD HH:MM:SS+00
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps demain à Londres ?'], 'user_name': ['max3']}>
+not the same user_name
+This is the datetime: 2016-07-30T00:00:00.000+02:00
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 134, in _ISO8601_to_UNIXtime
+    d = datetime.strptime(iso, '%Y-%m-%d %H:%M:%S+00')
+  File "/usr/lib/python3.5/_strptime.py", line 500, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/usr/lib/python3.5/_strptime.py", line 337, in _strptime
+    (data_string, format))
+ValueError: time data '2016-07-30T00:00:00.000+02:00' does not match format '%Y-%m-%d %H:%M:%S+00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 34, in get_forecast
+    fc.get_weather_at(when)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/webapi25/forecaster.py", line 402, in get_weather_at
+    timeformatutils.to_UNIXtime(timeobject))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 114, in to_UNIXtime
+    return _ISO8601_to_UNIXtime(timeobject)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 137, in _ISO8601_to_UNIXtime
+    'should have been: YYYY-MM-DD HH:MM:SS+00")
+ValueError: pyowm.utils.timeformatutils: bad format for input ISO8601 string, '             'should have been: YYYY-MM-DD HH:MM:SS+00
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba']}>
+not the same user_name
+This is the datetime: 2016-07-30T00:00:00.000+02:00
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 134, in _ISO8601_to_UNIXtime
+    d = datetime.strptime(iso, '%Y-%m-%d %H:%M:%S+00')
+  File "/usr/lib/python3.5/_strptime.py", line 500, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/usr/lib/python3.5/_strptime.py", line 337, in _strptime
+    (data_string, format))
+ValueError: time data '2016-07-30T00:00:00.000+02:00' does not match format '%Y-%m-%d %H:%M:%S+00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 34, in get_forecast
+    fc.get_weather_at(when)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/webapi25/forecaster.py", line 402, in get_weather_at
+    timeformatutils.to_UNIXtime(timeobject))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 114, in to_UNIXtime
+    return _ISO8601_to_UNIXtime(timeobject)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/pyowm/utils/timeformatutils.py", line 137, in _ISO8601_to_UNIXtime
+    'should have been: YYYY-MM-DD HH:MM:SS+00")
+ValueError: pyowm.utils.timeformatutils: bad format for input ISO8601 string, '             'should have been: YYYY-MM-DD HH:MM:SS+00
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['bouba'], 'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+b'Dans quelle ville ?'
+The session state is now: {}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba'], 'text': ['Quel temps fera-t-il demain à Rome ?']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 49, in get_forecast
+    w = obs.get_weather()
+AttributeError: 'Forecast' object has no attribute 'get_weather'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba']}>
+not the same user_name
+b'Dans quelle ville ?'
+The session state is now: {}
+Wit answered: {'context': {}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba2']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 51, in get_forecast
+    w = obs.get_weather_at(when)
+AttributeError: 'Forecast' object has no attribute 'get_weather_at'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba3'], 'text': ['Quel temps fera-t-il demain à Rome ?']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 55, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 47, in get_forecast
+    when.hour = 12
+AttributeError: attribute 'hour' of 'datetime.datetime' objects is not writable
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['bouba4'], 'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+This is the status: partiellement ensoleillé and loc: Rome, US
+b' Le temps sera partiellement ensoleill\xc3\xa9Rome, US '
+The session state is now: {'forecast': 'partiellement ensoleilléRome, US'}
+Wit answered: {'msg': b' Le temps sera partiellement ensoleill\xc3\xa9Rome, US ', 'context': {'forecast': 'partiellement ensoleilléRome, US'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba4'], 'text': ['Quel temps fera-t-il demain à Rome ?']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+This is the status: partiellement ensoleillé and loc: Rome, US
+b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+The session state is now: {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}
+Wit answered: {'context': {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}, 'msg': b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['bouba5'], 'text': ['Quel temps fera-t-il demain à Rome, IT ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+This is the status: partiellement ensoleillé and loc: Rome, US at 2016-07-31 00:00:00+02:00
+b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+The session state is now: {'weather_location': 'Rome, US', 'forecast': 'partiellement ensoleillé'}
+Wit answered: {'msg': b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)", 'context': {'weather_location': 'Rome, US', 'forecast': 'partiellement ensoleillé'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba6'], 'text': ['Quel temps fera-t-il demain à Rome, IT ?']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+This is the status: partiellement ensoleillé and loc: Rome, US at 2016-07-31 00:00:00+02:00
+b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+The session state is now: {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}
+Wit answered: {'context': {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}, 'msg': b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max'], 'text': ['Quel temps fera-t-il demain à Paris ?']}>
+not the same user_name
+This is the datetime: 2016-07-31 00:00:00+02:00
+This is the status: peu nuageux and loc: Paris, FR at 2016-07-31 00:00:00+02:00
+b" Le temps sera peu nuageux \xc3\xa0 Paris, FR. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+The session state is now: {'forecast': 'peu nuageux', 'weather_location': 'Paris, FR'}
+Wit answered: {'context': {'forecast': 'peu nuageux', 'weather_location': 'Paris, FR'}, 'msg': b" Le temps sera peu nuageux \xc3\xa0 Paris, FR. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+b'Dans quelle ville ?'
+b'Quand ?'
+The session state is now: {}
+Wit answered: {'context': {}, 'msg': b'Quand ?'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2']}>
+not the same user_name
+calling run_actions
+This is the datetime: 2016-07-31 00:00:00+02:00
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'context': {'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max2']}>
+not the same user_name
+calling run_actions
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 57, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 34, in get_forecast
+    when = dateutil.parser.parse(first_entity_value(entities, 'datetime'))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 1164, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 552, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 671, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 188, in split
+    return list(cls(s))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 177, in __next__
+    token = self.get_token()
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 93, in get_token
+    nextchar = self.instream.read(1)
+AttributeError: 'NoneType' object has no attribute 'read'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+b'Quand ?'
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {}
+Wit answered: {'context': {}, 'msg': b'Dans quelle ville ?'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-07-31 00:00:00+02:00
+Everything is ok and context: {}
+This is the status: partiellement ensoleillé and loc: Rome, US at 2016-07-31 00:00:00+02:00
+b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+after calling run_actions
+The session state is now: {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}
+Wit answered: {'msg': b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)", 'context': {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain à Rome ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-07-31 00:00:00+02:00
+Everything is ok and context: {}
+This is the status: partiellement ensoleillé and loc: Rome, US at 2016-07-31 00:00:00+02:00
+b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)"
+after calling run_actions
+The session state is now: {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}
+Wit answered: {'msg': b" Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Rome, US. Si ce n'est pas la ville souhait\xc3\xa9e, pr\xc3\xa9cisez moi le pays :)", 'context': {'forecast': 'partiellement ensoleillé', 'weather_location': 'Rome, US'}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-07-31 00:00:00+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 61, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 35, in get_forecast
+    when = dateutil.parser.parse(first_entity_value(entities, 'datetime'))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 1164, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 552, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 671, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 188, in split
+    return list(cls(s))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 177, in __next__
+    token = self.get_token()
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 93, in get_token
+    nextchar = self.instream.read(1)
+AttributeError: 'NoneType' object has no attribute 'read'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+b'Quand ?'
+after calling run_actions
+The session state is now: {}
+Wit answered: {'msg': b'Quand ?', 'context': {}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Demain'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-07-31 00:00:00+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-08-01 00:00:00+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome, IT'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 61, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 35, in get_forecast
+    logger.debug("This is the datetime: " + str(when))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 1164, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 552, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 671, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 188, in split
+    return list(cls(s))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 177, in __next__
+    token = self.get_token()
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 93, in get_token
+    nextchar = self.instream.read(1)
+AttributeError: 'NoneType' object has no attribute 'read'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome, IT'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+b'Quand ?'
+after calling run_actions
+The session state is now: {}
+Wit answered: {'msg': b'Quand ?', 'context': {}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max3']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-08-01 00:00:00+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max4']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-08-01 00:00:00+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome, IT'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max4']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 61, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 35, in get_forecast
+    logger.debug("This is the datetime: " + str(when))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 1164, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 552, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 671, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 188, in split
+    return list(cls(s))
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 177, in __next__
+    token = self.get_token()
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/dateutil/parser.py", line 93, in get_token
+    nextchar = self.instream.read(1)
+AttributeError: 'NoneType' object has no attribute 'read'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Fera-t-il beau demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max5']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'context': {'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome, IT'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max5']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: None
+No date given and context: {}
+b'Quand ?'
+after calling run_actions
+The session state is now: {'missingDatetime': True}
+Wit answered: {'context': {'missingDatetime': True}, 'msg': b'Quand ?'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Fera-t-il beau demain ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max6']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+after calling run_actions
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome, IT'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max6']}>
+not the same user_name
+calling run_actions
+Just received context: {}
+This is the datetime: None
+No date given and context: {}
+b'Quand ?'
+after calling run_actions
+The session state is now: {'missingDatetime': True}
+Wit answered: {'msg': b'Quand ?', 'context': {'missingDatetime': True}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max7'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Fera-t-il beau à Rome ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {}
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {'missingDatetime': True}
+Wit answered: {'msg': b'Quand ?', 'context': {'missingDatetime': True}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max7'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Demain']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'missingLocation': True}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max8'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max8'], 'text': ['A Rome, IT']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome, IT'}
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {'location': 'Rome, IT', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Rome, IT', 'missingDatetime': True}, 'msg': b'Quand ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max9'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max9'], 'text': ['A Rome, IT']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome, IT'}
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {'location': 'Rome, IT', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Rome, IT', 'missingDatetime': True}, 'msg': b'Quand ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max9'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max9'], 'text': ['A Rome, IT']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome, IT'}
+** after calling run_actions **
+The session state is now: {'location': 'Rome, IT', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Rome, IT', 'missingDatetime': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max10'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max10'], 'text': ['A Rome, IT']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome, IT'}
+** after calling run_actions **
+The session state is now: {'location': 'Rome, IT', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Rome, IT', 'missingDatetime': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max11'], 'text': ['Quel temps fait-il à Rome ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome'}
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {'location': 'Rome', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Rome', 'missingDatetime': True}, 'msg': b'Quand ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max11'], 'text': ['Demain']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Quand ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max11'], 'text': ['Demain']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Dans quelle ville ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max12'], 'text': ['Quel temps fera-t-il à Paris demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+Everything is ok and context: {'datetime': '2016-08-01T00:00:00.000+02:00', 'location': 'Paris'}
+This is the status: partiellement ensoleillé and loc: Paris, FR at 2016-08-01 00:00:00+02:00
+b' Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Paris, FR.'
+** after calling run_actions **
+The session state is now: {'weather_location': 'Paris, FR', 'datetime': '2016-08-01T00:00:00.000+02:00', 'location': 'Paris', 'forecast': 'partiellement ensoleillé'}
+Wit answered: {'context': {'weather_location': 'Paris, FR', 'datetime': '2016-08-01T00:00:00.000+02:00', 'location': 'Paris', 'forecast': 'partiellement ensoleillé'}, 'msg': b' Le temps sera partiellement ensoleill\xc3\xa9 \xc3\xa0 Paris, FR.'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max13'], 'text': ['Quel temps fera-t-il à Paris ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Paris'}
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {'location': 'Paris', 'missingDatetime': True}
+Wit answered: {'context': {'location': 'Paris', 'missingDatetime': True}, 'msg': b'Quand ?'}
+chat_message was called
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['max13'], 'text': ['Le 1/08']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+** after calling run_actions **
+The session state is now: {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}
+Wit answered: {'context': {'datetime': '2016-08-01T00:00:00.000+02:00', 'missingLocation': True}, 'msg': b'Quand ?'}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'missingLocation': True, 'datetime': '2016-08-01T00:00:00.000+02:00'}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True, 'datetime': '2016-08-01T00:00:00.000+02:00'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['A Rome']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome'}
+** after calling run_actions **
+The session state is now: {'missingDatetime': True, 'location': 'Rome'}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingDatetime': True, 'location': 'Rome'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Quel temps fera-t-il demain ?']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: 2016-08-01T00:00:00.000+02:00
+No location given and context: {'datetime': '2016-08-01T00:00:00.000+02:00'}
+b'Dans quelle ville ?'
+** after calling run_actions **
+The session state is now: {'missingLocation': True, 'datetime': '2016-08-01T00:00:00.000+02:00'}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingLocation': True, 'datetime': '2016-08-01T00:00:00.000+02:00'}}
+chat_message was called
+This is the request data: <QueryDict: {'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['A Rome']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+This is the datetime: None
+No date given and context: {'location': 'Rome'}
+** after calling run_actions **
+The session state is now: {'missingDatetime': True, 'location': 'Rome'}
+Wit answered: {'msg': b'Dans quelle ville ?', 'context': {'missingDatetime': True, 'location': 'Rome'}}
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+** calling run_actions **
+Just received context: {}
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 35, in chat_message
+    result = wit_chat(user_name, request.POST['text'] , {})
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 64, in wit_chat
+    context = client.run_actions(session_id, text, context)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/forecast.py", line 33, in get_forecast
+    logger.debug("This is session: " + str(request.session))
+AttributeError: 'dict' object has no attribute 'session'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+chat_message was called
+This is the request data: <QueryDict: {'text': ['Quel temps fera-t-il demain ?'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+** calling run_actions **
+b'Dans quelle ville ?'
+b'Quand ?'
+** after calling run_actions **
+The session state is now: {}
+Wit answered: {'msg': b'Quand ?', 'context': {}}
+chat_message was called
+This is the request data: <QueryDict: {'text': ['A Rome'], 'user_name': ['max'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+not the same user_name
+** calling run_actions **
+b'Oups d\xc3\xa9sol\xc3\xa9, redemandez-moi en pr\xc3\xa9cisant le pays, \xc3\xa7a devrait le faire.'
+** after calling run_actions **
+The session state is now: {}
+Wit answered: {'msg': b'Oups d\xc3\xa9sol\xc3\xa9, redemandez-moi en pr\xc3\xa9cisant le pays, \xc3\xa7a devrait le faire.', 'context': {}}

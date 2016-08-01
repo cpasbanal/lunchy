@@ -27,8 +27,12 @@ def chat_message(request):
     logger.debug("This is the request data: " + str(request.POST))
     assert request.POST['token'] == SLACK_TOKEN
     # don't reply to yourself
-    if not request.POST['user_name'] == BOT_NAME:
+    user_name = request.POST['user_name']
+    if not user_name == BOT_NAME:
         logger.debug("not the same user_name")
         # json_message = 'You said {}'.format(request.POST['text'])
-        json_message = wit_chat("1", request.POST['text'] , {})
-        return Response({"text": json_message})
+        # add session with user_name and test "And Brussels"
+        result = wit_chat(user_name, request.POST['text'] , {})
+        logger.debug("Wit answered: " + str(result))
+        return Response({"text": result["msg"],
+            "result": result})
