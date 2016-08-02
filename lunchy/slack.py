@@ -71,3 +71,4 @@ def chat_message(request):
         s["context"] = result["context"]
         s.save()
         return Response({"text": result["msg"], "result": result})
+    return Response({})

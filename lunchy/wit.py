@@ -4,6 +4,7 @@ from wit import Wit
 # from lunchy.subwit.common import first_entity_value
 from lunchy.subwit.forecast import get_forecast
 from lunchy.subwit.lunchy import set_availability, update_email, cancel_availability
+from lunchy.subwit.session import close_session
 
 # documentation and examples on the github page
 # https://github.com/wit-ai/pywit
@@ -35,6 +36,7 @@ actions = {
     'setAvailability': set_availability,
     'updateEmail': update_email,
     'cancelAvailability': cancel_availability,
+    'closeSession': close_session,
 }
 
 client = Wit(access_token=access_token, actions=actions)
