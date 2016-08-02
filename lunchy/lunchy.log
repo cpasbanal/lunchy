@@ -40019,3 +40019,722 @@ The session state is now: {'user_name': 'bouba11', 'missingEmail': True, 'lunchy
 Wit answered: {'msg': b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?', 'context': {'user_name': 'bouba11', 'missingEmail': True, 'lunchy': {'nickname': 'bouba11', 'datetime': '2016-08-02T00:00:00.000+02:00'}}}
 (0.000) BEGIN; args=None
 (0.004) UPDATE "django_session" SET "session_data" = 'OGMwOGMwNzhhNTY2ZGFkYmY0YzllN2UzMmI2N2E1YjBjNTRiNmFmYzp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiYm91YmExMSIsIm1pc3NpbmdFbWFpbCI6dHJ1ZSwibHVuY2h5Ijp7Im5pY2tuYW1lIjoiYm91YmExMSIsImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAifX19', "expire_date" = '2016-08-15 15:51:22.655557' WHERE "django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6'; args=('OGMwOGMwNzhhNTY2ZGFkYmY0YzllN2UzMmI2N2E1YjBjNTRiNmFmYzp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiYm91YmExMSIsIm1pc3NpbmdFbWFpbCI6dHJ1ZSwibHVuY2h5Ijp7Im5pY2tuYW1lIjoiYm91YmExMSIsImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAifX19', '2016-08-15 15:51:22.655557', 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'user_name': ['bouba11'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.007) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba11'; args=('bouba11',)
+Person found: bouba11
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6' LIMIT 1; args=('e4kfhovar0e5vqz2e88i2s9qcsr4ihp6',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6' AND "django_session"."expire_date" > '2016-08-01 15:53:41.793950'); args=('e4kfhovar0e5vqz2e88i2s9qcsr4ihp6', '2016-08-01 15:53:41.793950')
+The previous context is: {'missingEmail': True, 'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba11'}, 'user_name': 'bouba11'}
+** calling run_actions **
+** Start updating email... **
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba11'; args=('bouba11',)
+(0.000) BEGIN; args=None
+(0.002) UPDATE "lunchy_person" SET "nickname" = 'bouba11', "bio" = NULL, "email" = NULL, "session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6' WHERE "lunchy_person"."id" = 52; args=('bouba11', 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6', 52)
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: lunchy_person.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/lunchy.py", line 114, in update_email
+    person.save()
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/base.py", line 736, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/base.py", line 801, in _save_table
+    forced_update)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/base.py", line 851, in _do_update
+    return filtered._update(values) > 0
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/query.py", line 645, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1149, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: lunchy_person.email
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 68, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 119, in __run_actions
+    context = self.actions[action](request)
+  File "/home/cpasbanal/randomlunch/lunchy/subwit/lunchy.py", line 118, in update_email
+    logger.info("Cannot update email %s, record already exists" % request.POST["email"])
+AttributeError: 'dict' object has no attribute 'POST'
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" LIMIT 21; args=()
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."id" = 52 LIMIT 21; args=(52,)
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" LIMIT 21; args=()
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."id" = 52 LIMIT 21; args=(52,)
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'user_name': ['bouba11'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba11'; args=('bouba11',)
+Person found: bouba11
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6' LIMIT 1; args=('e4kfhovar0e5vqz2e88i2s9qcsr4ihp6',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6' AND "django_session"."expire_date" > '2016-08-01 15:54:45.928474'); args=('e4kfhovar0e5vqz2e88i2s9qcsr4ihp6', '2016-08-01 15:54:45.928474')
+The previous context is: {'missingEmail': True, 'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba11'}, 'user_name': 'bouba11'}
+** calling run_actions **
+b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?'
+** after calling run_actions **
+The session state is now: {'missingEmail': True, 'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba11'}, 'user_name': 'bouba11'}
+Wit answered: {'msg': b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?', 'context': {'missingEmail': True, 'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba11'}, 'user_name': 'bouba11'}}
+(0.000) BEGIN; args=None
+(0.004) UPDATE "django_session" SET "session_data" = 'NjFiYTgyYzlmNmRmYTAyYzNmMGJmNjA3M2NjNDFjNTExZTAwZTNjZjp7ImNvbnRleHQiOnsibWlzc2luZ0VtYWlsIjp0cnVlLCJsdW5jaHkiOnsiZGF0ZXRpbWUiOiIyMDE2LTA4LTAyVDAwOjAwOjAwLjAwMCswMjowMCIsIm5pY2tuYW1lIjoiYm91YmExMSJ9LCJ1c2VyX25hbWUiOiJib3ViYTExIn19', "expire_date" = '2016-08-15 15:54:47.130212' WHERE "django_session"."session_key" = 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6'; args=('NjFiYTgyYzlmNmRmYTAyYzNmMGJmNjA3M2NjNDFjNTExZTAwZTNjZjp7ImNvbnRleHQiOnsibWlzc2luZ0VtYWlsIjp0cnVlLCJsdW5jaHkiOnsiZGF0ZXRpbWUiOiIyMDE2LTA4LTAyVDAwOjAwOjAwLjAwMCswMjowMCIsIm5pY2tuYW1lIjoiYm91YmExMSJ9LCJ1c2VyX25hbWUiOiJib3ViYTExIn19', '2016-08-15 15:54:47.130212', 'e4kfhovar0e5vqz2e88i2s9qcsr4ihp6')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'user_name': ['bouba12'], 'text': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.010) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba12'; args=('bouba12',)
+(0.000) BEGIN; args=None
+(0.016) INSERT INTO "lunchy_person" ("nickname", "bio", "email", "session_key") VALUES ('bouba12', NULL, 'user@domain.com', NULL); args=['bouba12', None, 'user@domain.com', None]
+Person found: bouba12
+Session doesn't exist any more so create it
+(0.004) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix' LIMIT 1; args=('4gikhwmh1jhnrvlev15hgdntgjb9kkix',)
+(0.000) BEGIN; args=None
+(0.006) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '4gikhwmh1jhnrvlev15hgdntgjb9kkix', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 15:54:58.111661'; args=('4gikhwmh1jhnrvlev15hgdntgjb9kkix', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 15:54:58.111661')
+(0.000) BEGIN; args=None
+(0.004) UPDATE "lunchy_person" SET "nickname" = 'bouba12', "bio" = NULL, "email" = 'user@domain.com', "session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix' WHERE "lunchy_person"."id" = 53; args=('bouba12', 'user@domain.com', '4gikhwmh1jhnrvlev15hgdntgjb9kkix', 53)
+The previous context is: {'user_name': 'bouba12'}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'intent': [{'value': 'lunchy', 'confidence': 0.997176680536}], 'datetime': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00', 'values': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00'}], 'confidence': 0.9970475160721975}]}
+(0.078) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba12'; args=('bouba12',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+** after calling run_actions **
+The session state is now: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'missingEmail': True, 'user_name': 'bouba12'}
+Wit answered: {'context': {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'missingEmail': True, 'user_name': 'bouba12'}, 'msg': b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'}
+(0.000) BEGIN; args=None
+(0.008) UPDATE "django_session" SET "session_data" = 'NDA3ZWNjMTRlZWQzZjQ4YTYyYzAyN2ZiMmY1ZjZiNGU1OGM2OWUyNzp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTIifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEyIn19', "expire_date" = '2016-08-15 15:55:00.757357' WHERE "django_session"."session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix'; args=('NDA3ZWNjMTRlZWQzZjQ4YTYyYzAyN2ZiMmY1ZjZiNGU1OGM2OWUyNzp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTIifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEyIn19', '2016-08-15 15:55:00.757357', '4gikhwmh1jhnrvlev15hgdntgjb9kkix')
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'user_name': ['bouba12'], 'text': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba12'; args=('bouba12',)
+Person found: bouba12
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix' LIMIT 1; args=('4gikhwmh1jhnrvlev15hgdntgjb9kkix',)
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix' AND "django_session"."expire_date" > '2016-08-01 15:56:45.516953'); args=('4gikhwmh1jhnrvlev15hgdntgjb9kkix', '2016-08-01 15:56:45.516953')
+The previous context is: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'missingEmail': True, 'user_name': 'bouba12'}
+** calling run_actions **
+** Start updating email... **
+(0.006) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba12'; args=('bouba12',)
+(0.000) BEGIN; args=None
+(0.003) UPDATE "lunchy_person" SET "nickname" = 'bouba12', "bio" = NULL, "email" = NULL, "session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix' WHERE "lunchy_person"."id" = 53; args=('bouba12', '4gikhwmh1jhnrvlev15hgdntgjb9kkix', 53)
+Cannot update email None, record already exists
+** End of updating email with context: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'emailAlreadyExists': True, 'user_name': 'bouba12'}
+b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?'
+** after calling run_actions **
+The session state is now: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'emailAlreadyExists': True, 'user_name': 'bouba12'}
+Wit answered: {'context': {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba12'}, 'emailAlreadyExists': True, 'user_name': 'bouba12'}, 'msg': b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?'}
+(0.000) BEGIN; args=None
+(0.004) UPDATE "django_session" SET "session_data" = 'NGI4MDlhZjI1YTFhYWQ4ZTZjYzZkODRmYTFlMjA5ZGE3MTBmNGU1Yjp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTIifSwiZW1haWxBbHJlYWR5RXhpc3RzIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEyIn19', "expire_date" = '2016-08-15 15:56:46.499118' WHERE "django_session"."session_key" = '4gikhwmh1jhnrvlev15hgdntgjb9kkix'; args=('NGI4MDlhZjI1YTFhYWQ4ZTZjYzZkODRmYTFlMjA5ZGE3MTBmNGU1Yjp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTIifSwiZW1haWxBbHJlYWR5RXhpc3RzIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEyIn19', '2016-08-15 15:56:46.499118', '4gikhwmh1jhnrvlev15hgdntgjb9kkix')
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'user_name': ['bouba13'], 'text': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.045) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba13'; args=('bouba13',)
+(0.000) BEGIN; args=None
+(0.008) INSERT INTO "lunchy_person" ("nickname", "bio", "email", "session_key") VALUES ('bouba13', NULL, 'user@domain.com', NULL); args=['bouba13', None, 'user@domain.com', None]
+Person found: bouba13
+Session doesn't exist any more so create it
+(0.007) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80' LIMIT 1; args=('evxgsqf7wx1jb7xekq67cln7yc7vxi80',)
+(0.000) BEGIN; args=None
+(0.024) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'evxgsqf7wx1jb7xekq67cln7yc7vxi80', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 15:57:07.336263'; args=('evxgsqf7wx1jb7xekq67cln7yc7vxi80', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 15:57:07.336263')
+(0.000) BEGIN; args=None
+(0.020) UPDATE "lunchy_person" SET "nickname" = 'bouba13', "bio" = NULL, "email" = 'user@domain.com', "session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80' WHERE "lunchy_person"."id" = 54; args=('bouba13', 'user@domain.com', 'evxgsqf7wx1jb7xekq67cln7yc7vxi80', 54)
+The previous context is: {'user_name': 'bouba13'}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'intent': [{'value': 'lunchy', 'confidence': 0.9971517907798639}], 'datetime': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00', 'values': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00'}], 'confidence': 0.9970475160721975}]}
+(0.003) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba13'; args=('bouba13',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+** after calling run_actions **
+The session state is now: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'missingEmail': True, 'user_name': 'bouba13'}
+Wit answered: {'context': {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'missingEmail': True, 'user_name': 'bouba13'}, 'msg': b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'}
+(0.000) BEGIN; args=None
+(0.032) UPDATE "django_session" SET "session_data" = 'Y2U5MThiODM4MzBhMzNlOGM3M2IwMTQ2YThlNGFhZWViNDdmNDdhZjp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTMifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEzIn19', "expire_date" = '2016-08-15 15:57:08.216033' WHERE "django_session"."session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80'; args=('Y2U5MThiODM4MzBhMzNlOGM3M2IwMTQ2YThlNGFhZWViNDdmNDdhZjp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTMifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEzIn19', '2016-08-15 15:57:08.216033', 'evxgsqf7wx1jb7xekq67cln7yc7vxi80')
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'user_name': ['bouba13'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba13'; args=('bouba13',)
+Person found: bouba13
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80' LIMIT 1; args=('evxgsqf7wx1jb7xekq67cln7yc7vxi80',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80' AND "django_session"."expire_date" > '2016-08-01 16:00:28.426006'); args=('evxgsqf7wx1jb7xekq67cln7yc7vxi80', '2016-08-01 16:00:28.426006')
+The previous context is: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'missingEmail': True, 'user_name': 'bouba13'}
+** calling run_actions **
+** Start updating email... **
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba13'; args=('bouba13',)
+(0.000) BEGIN; args=None
+(0.008) UPDATE "lunchy_person" SET "nickname" = 'bouba13', "bio" = NULL, "email" = NULL, "session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80' WHERE "lunchy_person"."id" = 54; args=('bouba13', 'evxgsqf7wx1jb7xekq67cln7yc7vxi80', 54)
+Cannot update email None, record already exists
+** End of updating email with context: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'emailAlreadyExists': True, 'user_name': 'bouba13'}
+b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?'
+** after calling run_actions **
+The session state is now: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'emailAlreadyExists': True, 'user_name': 'bouba13'}
+Wit answered: {'context': {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba13'}, 'emailAlreadyExists': True, 'user_name': 'bouba13'}, 'msg': b'D\xc3\xa9sol\xc3\xa9 mais cette adresse email est d\xc3\xa9j\xc3\xa0 enregistr\xc3\xa9e pour un autre utilisateur, en avez-vous une autre \xc3\xa0 me proposer ?'}
+(0.000) BEGIN; args=None
+(0.006) UPDATE "django_session" SET "session_data" = 'ZjI5YTYxMDBjZmIxZjkyMjYxMzMzNDI2NzFlNTM0ZDFjOWMzNjk4ZTp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTMifSwiZW1haWxBbHJlYWR5RXhpc3RzIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEzIn19', "expire_date" = '2016-08-15 16:00:29.577576' WHERE "django_session"."session_key" = 'evxgsqf7wx1jb7xekq67cln7yc7vxi80'; args=('ZjI5YTYxMDBjZmIxZjkyMjYxMzMzNDI2NzFlNTM0ZDFjOWMzNjk4ZTp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTMifSwiZW1haWxBbHJlYWR5RXhpc3RzIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTEzIn19', '2016-08-15 16:00:29.577576', 'evxgsqf7wx1jb7xekq67cln7yc7vxi80')
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'user_name': ['bouba14'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.024) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+(0.000) BEGIN; args=None
+(0.008) INSERT INTO "lunchy_person" ("nickname", "bio", "email", "session_key") VALUES ('bouba14', NULL, 'user@domain.com', NULL); args=['bouba14', None, 'user@domain.com', None]
+Person found: bouba14
+Session doesn't exist any more so create it
+(0.038) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.000) BEGIN; args=None
+(0.012) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'dzbhj3qrsp54gro60s3rpmxdmurwdoba', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 16:00:57.079990'; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba', 'OTRjMTc3NDc0MTI2NDhlMWVhNWU4MjdmMGNlZDllYzNmMDZlYTc4Njp7fQ==', '2016-08-15 16:00:57.079990')
+(0.007) BEGIN; args=None
+(0.083) UPDATE "lunchy_person" SET "nickname" = 'bouba14', "bio" = NULL, "email" = 'user@domain.com', "session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' WHERE "lunchy_person"."id" = 55; args=('bouba14', 'user@domain.com', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba', 55)
+The previous context is: {'user_name': 'bouba14'}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'intent': [{'value': 'lunchy', 'confidence': 0.9986021243301143}], 'datetime': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00', 'values': [{'grain': 'day', 'type': 'value', 'value': '2016-08-02T00:00:00.000+02:00'}], 'confidence': 0.9974605061437102}]}
+(0.015) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+** after calling run_actions **
+The session state is now: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba14'}, 'missingEmail': True, 'user_name': 'bouba14'}
+Wit answered: {'context': {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba14'}, 'missingEmail': True, 'user_name': 'bouba14'}, 'msg': b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'}
+(0.000) BEGIN; args=None
+(0.024) UPDATE "django_session" SET "session_data" = 'OTdhZmVhOWY2ZjNhZDc4YmI1NTQxYTZjMGI1ZDFkZWU3OTczMmM3Yzp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTQifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTE0In19', "expire_date" = '2016-08-15 16:00:58.593565' WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba'; args=('OTdhZmVhOWY2ZjNhZDc4YmI1NTQxYTZjMGI1ZDFkZWU3OTczMmM3Yzp7ImNvbnRleHQiOnsibHVuY2h5Ijp7ImRhdGV0aW1lIjoiMjAxNi0wOC0wMlQwMDowMDowMC4wMDArMDI6MDAiLCJuaWNrbmFtZSI6ImJvdWJhMTQifSwibWlzc2luZ0VtYWlsIjp0cnVlLCJ1c2VyX25hbWUiOiJib3ViYTE0In19', '2016-08-15 16:00:58.593565', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba')
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'user_name': ['jeremie'], 'timestamp': ['1470068614.000022'], 'user_id': ['U03JE3HVD'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['hello'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+A real user is calling (not the bot)
+(0.027) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'jeremie'; args=('jeremie',)
+Person found: jeremie
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' LIMIT 1; args=('xry56pkuk3vx1sje91ig7z2j46jyigcm',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' AND "django_session"."expire_date" > '2016-08-01 16:23:35.623450'); args=('xry56pkuk3vx1sje91ig7z2j46jyigcm', '2016-08-01 16:23:35.623450')
+The previous context is: {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}
+** calling run_actions **
+b'Oups d\xc3\xa9sol\xc3\xa9, redemandez-moi en pr\xc3\xa9cisant le pays, \xc3\xa7a devrait le faire.'
+** after calling run_actions **
+The session state is now: {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}
+Wit answered: {'context': {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}, 'msg': b'Oups d\xc3\xa9sol\xc3\xa9, redemandez-moi en pr\xc3\xa9cisant le pays, \xc3\xa7a devrait le faire.'}
+(0.000) BEGIN; args=None
+(0.004) UPDATE "django_session" SET "session_data" = 'M2M5YzFiYzJiMmJiNTQ0NDNiNzllNGMzYjBhOWJmZjhkNzBmMGRjNzp7ImNvbnRleHQiOnsiZm9yZWNhc3QiOiJsXHUwMGU5Z1x1MDBlOHJlcyBwbHVpZXMiLCJ1c2VyX25hbWUiOiJqZXJlbWllIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', "expire_date" = '2016-08-15 16:23:36.157046' WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm'; args=('M2M5YzFiYzJiMmJiNTQ0NDNiNzllNGMzYjBhOWJmZjhkNzBmMGRjNzp7ImNvbnRleHQiOnsiZm9yZWNhc3QiOiJsXHUwMGU5Z1x1MDBlOHJlcyBwbHVpZXMiLCJ1c2VyX25hbWUiOiJqZXJlbWllIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', '2016-08-15 16:23:36.157046', 'xry56pkuk3vx1sje91ig7z2j46jyigcm')
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'timestamp': ['1470068616.000023'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['Oups désolé, redemandez-moi en précisant le pays, ça devrait le faire.'], 'channel_id': ['C1UJPS91Q'], 'bot_name': [''], 'user_id': ['USLACKBOT'], 'bot_id': ['B1UJJR597'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'user_name': ['jeremie'], 'timestamp': ['1470068618.000024'], 'user_id': ['U03JE3HVD'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['hello'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+A real user is calling (not the bot)
+(0.011) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'jeremie'; args=('jeremie',)
+Person found: jeremie
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' LIMIT 1; args=('xry56pkuk3vx1sje91ig7z2j46jyigcm',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' AND "django_session"."expire_date" > '2016-08-01 16:23:39.203108'); args=('xry56pkuk3vx1sje91ig7z2j46jyigcm', '2016-08-01 16:23:39.203108')
+The previous context is: {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}
+** calling run_actions **
+b"Bonjour, je m'appelle Vera. Et vous ?"
+** after calling run_actions **
+The session state is now: {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}
+Wit answered: {'context': {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}, 'msg': b"Bonjour, je m'appelle Vera. Et vous ?"}
+(0.001) BEGIN; args=None
+(0.064) UPDATE "django_session" SET "session_data" = 'MTFiZWU3ZjkwMjZhZTBmYTFjNGQzNjU2MmJkOWIyOTQwOTc1ZTAzZjp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiamVyZW1pZSIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', "expire_date" = '2016-08-15 16:23:40.031180' WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm'; args=('MTFiZWU3ZjkwMjZhZTBmYTFjNGQzNjU2MmJkOWIyOTQwOTc1ZTAzZjp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiamVyZW1pZSIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', '2016-08-15 16:23:40.031180', 'xry56pkuk3vx1sje91ig7z2j46jyigcm')
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'timestamp': ['1470068620.000025'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ["Bonjour, je m'appelle Vera. Et vous ?"], 'channel_id': ['C1UJPS91Q'], 'bot_name': [''], 'user_id': ['USLACKBOT'], 'bot_id': ['B1UJJR597'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'user_name': ['jeremie'], 'timestamp': ['1470068628.000026'], 'user_id': ['U03JE3HVD'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['jérémie, enchanté'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+A real user is calling (not the bot)
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'jeremie'; args=('jeremie',)
+Person found: jeremie
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' LIMIT 1; args=('xry56pkuk3vx1sje91ig7z2j46jyigcm',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' AND "django_session"."expire_date" > '2016-08-01 16:23:49.148989'); args=('xry56pkuk3vx1sje91ig7z2j46jyigcm', '2016-08-01 16:23:49.148989')
+The previous context is: {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}
+** calling run_actions **
+b"Enchant\xc3\xa9 ! Je peux r\xc3\xa9pondre \xc3\xa0 vos questions autour de la m\xc3\xa9t\xc3\xa9o, planifier des d\xc3\xa9jeuners al\xc3\xa9atoires (en cours)... et bien d'autres \xc3\xa0 venir. Teste-moi et j'apprendrai !"
+** after calling run_actions **
+The session state is now: {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}
+Wit answered: {'context': {'forecast': 'légères pluies', 'user_name': 'jeremie', 'weather_location': 'Paris, FR'}, 'msg': b"Enchant\xc3\xa9 ! Je peux r\xc3\xa9pondre \xc3\xa0 vos questions autour de la m\xc3\xa9t\xc3\xa9o, planifier des d\xc3\xa9jeuners al\xc3\xa9atoires (en cours)... et bien d'autres \xc3\xa0 venir. Teste-moi et j'apprendrai !"}
+(0.000) BEGIN; args=None
+(0.004) UPDATE "django_session" SET "session_data" = 'M2M5YzFiYzJiMmJiNTQ0NDNiNzllNGMzYjBhOWJmZjhkNzBmMGRjNzp7ImNvbnRleHQiOnsiZm9yZWNhc3QiOiJsXHUwMGU5Z1x1MDBlOHJlcyBwbHVpZXMiLCJ1c2VyX25hbWUiOiJqZXJlbWllIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', "expire_date" = '2016-08-15 16:23:49.824747' WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm'; args=('M2M5YzFiYzJiMmJiNTQ0NDNiNzllNGMzYjBhOWJmZjhkNzBmMGRjNzp7ImNvbnRleHQiOnsiZm9yZWNhc3QiOiJsXHUwMGU5Z1x1MDBlOHJlcyBwbHVpZXMiLCJ1c2VyX25hbWUiOiJqZXJlbWllIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', '2016-08-15 16:23:49.824747', 'xry56pkuk3vx1sje91ig7z2j46jyigcm')
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'timestamp': ['1470068630.000027'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ["Enchanté ! Je peux répondre à vos questions autour de la météo, planifier des déjeuners aléatoires (en cours)... et bien d'autres à venir. Teste-moi et j'apprendrai !"], 'channel_id': ['C1UJPS91Q'], 'bot_name': [''], 'user_id': ['USLACKBOT'], 'bot_id': ['B1UJJR597'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'channel_id': ['C1UJPS91Q'], 'user_name': ['jeremie'], 'timestamp': ['1470068645.000028'], 'user_id': ['U03JE3HVD'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['comment ça marche les déjeuners aléatoires ?'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+A real user is calling (not the bot)
+(0.010) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'jeremie'; args=('jeremie',)
+Person found: jeremie
+(0.006) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' LIMIT 1; args=('xry56pkuk3vx1sje91ig7z2j46jyigcm',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' AND "django_session"."expire_date" > '2016-08-01 16:24:05.455678'); args=('xry56pkuk3vx1sje91ig7z2j46jyigcm', '2016-08-01 16:24:05.455678')
+The previous context is: {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}
+** calling run_actions **
+b"Vous me dites quand vous \xc3\xaates disponible. Je me le note et d\xc3\xa8s qu'il y a assez de personnes disponibles pour la m\xc3\xaame date, je vous envoie une invitation."
+b'Aussi simple que \xc3\xa7a :)'
+** after calling run_actions **
+The session state is now: {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}
+Wit answered: {'context': {'user_name': 'jeremie', 'forecast': 'légères pluies', 'weather_location': 'Paris, FR'}, 'msg': b'Aussi simple que \xc3\xa7a :)'}
+(0.000) BEGIN; args=None
+(0.017) UPDATE "django_session" SET "session_data" = 'MTFiZWU3ZjkwMjZhZTBmYTFjNGQzNjU2MmJkOWIyOTQwOTc1ZTAzZjp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiamVyZW1pZSIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', "expire_date" = '2016-08-15 16:24:06.769562' WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm'; args=('MTFiZWU3ZjkwMjZhZTBmYTFjNGQzNjU2MmJkOWIyOTQwOTc1ZTAzZjp7ImNvbnRleHQiOnsidXNlcl9uYW1lIjoiamVyZW1pZSIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiJ9fQ==', '2016-08-15 16:24:06.769562', 'xry56pkuk3vx1sje91ig7z2j46jyigcm')
+** Chat_message was called **
+This is the request data: <QueryDict: {'team_domain': ['crms'], 'channel_name': ['lunchybot_tests'], 'user_name': ['slackbot'], 'timestamp': ['1470068647.000029'], 'service_id': ['62630855313'], 'team_id': ['T03JDK6SM'], 'text': ['Aussi simple que ça :)'], 'channel_id': ['C1UJPS91Q'], 'bot_name': [''], 'user_id': ['USLACKBOT'], 'bot_id': ['B1UJJR597'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'user_id': ['U03JE3HVD'], 'channel_id': ['C1UJPS91Q'], 'team_id': ['T03JDK6SM'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['jeremie'], 'service_id': ['62630855313'], 'channel_name': ['lunchybot_tests'], 'text': ['comment ça marche les déjeuners aléatoires ?'], 'timestamp': ['1470068699.000030'], 'team_domain': ['crms']}>
+A real user is calling (not the bot)
+(0.010) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'jeremie'; args=('jeremie',)
+Person found: jeremie
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' LIMIT 1; args=('xry56pkuk3vx1sje91ig7z2j46jyigcm',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm' AND "django_session"."expire_date" > '2016-08-01 16:25:00.491236'); args=('xry56pkuk3vx1sje91ig7z2j46jyigcm', '2016-08-01 16:25:00.491236')
+The previous context is: {'weather_location': 'Paris, FR', 'forecast': 'légères pluies', 'user_name': 'jeremie'}
+** calling run_actions **
+b'Oups d\xc3\xa9sol\xc3\xa9, redemandez-moi en pr\xc3\xa9cisant le pays, \xc3\xa7a devrait le faire.'
+** after calling run_actions **
+The session state is now: {'weather_location': 'Paris, FR', 'forecast': 'légères pluies', 'user_name': 'jeremie'}
+Wit answered: {'context': {'weather_location': 'Paris, FR', 'forecast': 'légères pluies', 'user_name': 'jeremie'}, 'msg': "\nb'Oups d\\xc3\\xa9sol\\xc3\\xa9, redemandez-moi en pr\\xc3\\xa9cisant le pays, \\xc3\\xa7a devrait le faire.'"}
+(0.000) BEGIN; args=None
+(0.021) UPDATE "django_session" SET "session_data" = 'NGExNjA3ODExODIyMzgwOTlmNjQ0ZjRhZjVjZjkxODEwNzU2Yjk5Yjp7ImNvbnRleHQiOnsid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwidXNlcl9uYW1lIjoiamVyZW1pZSJ9fQ==', "expire_date" = '2016-08-15 16:25:01.581945' WHERE "django_session"."session_key" = 'xry56pkuk3vx1sje91ig7z2j46jyigcm'; args=('NGExNjA3ODExODIyMzgwOTlmNjQ0ZjRhZjVjZjkxODEwNzU2Yjk5Yjp7ImNvbnRleHQiOnsid2VhdGhlcl9sb2NhdGlvbiI6IlBhcmlzLCBGUiIsImZvcmVjYXN0IjoibFx1MDBlOWdcdTAwZThyZXMgcGx1aWVzIiwidXNlcl9uYW1lIjoiamVyZW1pZSJ9fQ==', '2016-08-15 16:25:01.581945', 'xry56pkuk3vx1sje91ig7z2j46jyigcm')
+** Chat_message was called **
+This is the request data: <QueryDict: {'user_id': ['USLACKBOT'], 'team_id': ['T03JDK6SM'], 'bot_name': [''], 'user_name': ['slackbot'], 'channel_name': ['lunchybot_tests'], 'bot_id': ['B1UJJR597'], 'team_domain': ['crms'], 'channel_id': ['C1UJPS91Q'], 'timestamp': ['1470068702.000031'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'service_id': ['62630855313'], 'text': ["\nb'Oups d\\xc3\\xa9sol\\xc3\\xa9, redemandez-moi en pr\\xc3\\xa9cisant le pays, \\xc3\\xa7a devrait le faire.'"]}>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'user_name': ['bouba14'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40']}>
+A real user is calling (not the bot)
+(0.012) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.007) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-08-01 18:34:19.490976' AND "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba'); args=('2016-08-01 18:34:19.490976', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba')
+The previous context is: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba14'}, 'missingEmail': True, 'user_name': 'bouba14'}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'datetime': [{'type': 'value', 'grain': 'day', 'confidence': 0.997412157706959, 'value': '2016-08-02T00:00:00.000+02:00', 'values': [{'type': 'value', 'grain': 'day', 'value': '2016-08-02T00:00:00.000+02:00'}]}], 'contact': [{'type': 'value', 'confidence': 0.9484569676311495, 'value': 'Adam Smith', 'suggested': True}], 'intent': [{'confidence': 0.9961985133187581, 'value': 'lunchy'}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+(0.000) BEGIN; args=None
+(0.007) INSERT INTO "lunchy_person" ("nickname", "bio", "email", "session_key") VALUES ('Adam Smith', NULL, 'user@domain.com', NULL); args=['Adam Smith', None, 'user@domain.com', None]
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 69, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 115, in __run_actions
+    self.actions['send'](request, response)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 28, in send
+    result["msg"] = result["msg"] + "\n" + response['text']
+TypeError: Can't convert 'bytes' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'email': ['adam.smith@mydomaintest.com'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'user_name': ['bouba14']}>
+A real user is calling (not the bot)
+(0.008) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.002) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-08-02 06:39:40.852590' AND "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba'); args=('2016-08-02 06:39:40.852590', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba')
+The previous context is: {'missingEmail': True, 'user_name': 'bouba14', 'lunchy': {'nickname': 'bouba14', 'datetime': '2016-08-02T00:00:00.000+02:00'}}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'contact': [{'value': 'Adam Smith', 'type': 'value', 'suggested': True, 'confidence': 0.9484569676311495}], 'datetime': [{'value': '2016-08-03T00:00:00.000+02:00', 'type': 'value', 'values': [{'value': '2016-08-03T00:00:00.000+02:00', 'type': 'value', 'grain': 'day'}], 'grain': 'day', 'confidence': 0.9973612001641468}], 'intent': [{'value': 'lunchy', 'confidence': 0.9961985133187581}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+<class 'bytes'>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 70, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 118, in __run_actions
+    self.throw_if_action_missing(action)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 166, in throw_if_action_missing
+    raise WitError('unknown action: ' + action_name)
+TypeError: Can't convert 'NoneType' object to str implicitly
+** Chat_message was called **
+This is the request data: <QueryDict: {'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'email': ['adam.smith@mydomaintest.com'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'user_name': ['bouba14']}>
+A real user is calling (not the bot)
+(0.006) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-08-02 06:40:21.990850' AND "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba'); args=('2016-08-02 06:40:21.990850', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba')
+The previous context is: {'missingEmail': True, 'user_name': 'bouba14', 'lunchy': {'nickname': 'bouba14', 'datetime': '2016-08-02T00:00:00.000+02:00'}}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'contact': [{'value': 'Adam Smith', 'type': 'value', 'suggested': True, 'confidence': 0.9484569676311495}], 'datetime': [{'value': '2016-08-03T00:00:00.000+02:00', 'type': 'value', 'values': [{'value': '2016-08-03T00:00:00.000+02:00', 'type': 'value', 'grain': 'day'}], 'grain': 'day', 'confidence': 0.9973612001641468}], 'intent': [{'value': 'lunchy', 'confidence': 0.9961985133187581}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+<class 'bytes'>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 70, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 118, in __run_actions
+    self.throw_if_action_missing(action)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 166, in throw_if_action_missing
+    raise WitError('unknown action: ' + action_name)
+TypeError: Can't convert 'NoneType' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'user_name': ['bouba14'], 'email': ['adam.smith@mydomaintest.com'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain']}>
+A real user is calling (not the bot)
+(0.006) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' AND "django_session"."expire_date" > '2016-08-02 06:43:28.281551'); args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba', '2016-08-02 06:43:28.281551')
+The previous context is: {'missingEmail': True, 'user_name': 'bouba14', 'lunchy': {'nickname': 'bouba14', 'datetime': '2016-08-02T00:00:00.000+02:00'}}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'contact': [{'confidence': 0.9484569676311495, 'type': 'value', 'suggested': True, 'value': 'Adam Smith'}], 'intent': [{'confidence': 0.9961985133187581, 'value': 'lunchy'}], 'datetime': [{'grain': 'day', 'confidence': 0.9973612001641468, 'values': [{'grain': 'day', 'type': 'value', 'value': '2016-08-03T00:00:00.000+02:00'}], 'type': 'value', 'value': '2016-08-03T00:00:00.000+02:00'}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+<class 'bytes'>
+
+Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le déjeuner ?
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 72, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 118, in __run_actions
+    self.throw_if_action_missing(action)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 166, in throw_if_action_missing
+    raise WitError('unknown action: ' + action_name)
+TypeError: Can't convert 'NoneType' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'user_name': ['bouba14'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'email': ['adam.smith@mydomaintest.com']}>
+A real user is calling (not the bot)
+(0.012) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-08-02 06:44:26.248237' AND "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba'); args=('2016-08-02 06:44:26.248237', 'dzbhj3qrsp54gro60s3rpmxdmurwdoba')
+The previous context is: {'user_name': 'bouba14', 'missingEmail': True, 'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba14'}}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'intent': [{'confidence': 0.9961985133187581, 'value': 'lunchy'}], 'datetime': [{'confidence': 0.9973612001641468, 'type': 'value', 'values': [{'type': 'value', 'value': '2016-08-03T00:00:00.000+02:00', 'grain': 'day'}], 'value': '2016-08-03T00:00:00.000+02:00', 'grain': 'day'}], 'contact': [{'confidence': 0.9484569676311495, 'type': 'value', 'suggested': True, 'value': 'Adam Smith'}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+<class 'bytes'>
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 71, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 115, in __run_actions
+    self.actions['send'](request, response)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 29, in send
+    result["msg"] = result["msg"] + "\n" + response["text"] #.decode("utf-8")
+TypeError: Can't convert 'bytes' object to str implicitly
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+** Chat_message was called **
+This is the request data: <QueryDict: {'email': ['adam.smith@mydomaintest.com'], 'token': ['jiGg6v1HO1wTaJHsKQJ00w40'], 'text': ['Prévois un déjeuner aléatoire pour Adam Smith demain'], 'user_name': ['bouba14'], 'old': ['Adam Smith est disponible demain pour un déjeuner aléatoire']}>
+A real user is calling (not the bot)
+(0.006) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'bouba14'; args=('bouba14',)
+Person found: bouba14
+(0.003) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' LIMIT 1; args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba',)
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'dzbhj3qrsp54gro60s3rpmxdmurwdoba' AND "django_session"."expire_date" > '2016-08-02 06:45:09.205795'); args=('dzbhj3qrsp54gro60s3rpmxdmurwdoba', '2016-08-02 06:45:09.205795')
+The previous context is: {'lunchy': {'datetime': '2016-08-02T00:00:00.000+02:00', 'nickname': 'bouba14'}, 'missingEmail': True, 'user_name': 'bouba14'}
+** calling run_actions **
+** Start setting availaibility... **
+Got entities: {'contact': [{'confidence': 0.9484569676311495, 'type': 'value', 'suggested': True, 'value': 'Adam Smith'}], 'datetime': [{'confidence': 0.9973612001641468, 'type': 'value', 'value': '2016-08-03T00:00:00.000+02:00', 'values': [{'type': 'value', 'value': '2016-08-03T00:00:00.000+02:00', 'grain': 'day'}], 'grain': 'day'}], 'intent': [{'confidence': 0.9961985133187581, 'value': 'lunchy'}]}
+(0.002) SELECT "lunchy_person"."id", "lunchy_person"."nickname", "lunchy_person"."bio", "lunchy_person"."email", "lunchy_person"."session_key" FROM "lunchy_person" WHERE "lunchy_person"."nickname" = 'Adam Smith'; args=('Adam Smith',)
+This is the person email: user@domain.com
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+<class 'bytes'>
+
+b'Pouvez-vous me donner votre email pour que je puisse vous envoyer une invitation pour le d\xc3\xa9jeuner ?'
+Internal Server Error: /lunchy/api/v1/message/
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/rest_framework/decorators.py", line 52, in handler
+    return func(*args, **kwargs)
+  File "/home/cpasbanal/randomlunch/lunchy/slack.py", line 68, in chat_message
+    result = wit_chat(user_name + "__" + str(session_key), request.POST['text'] , previous_context)
+  File "/home/cpasbanal/randomlunch/lunchy/wit.py", line 71, in wit_chat
+    context = client.run_actions(session_id, text, context, max_steps=8)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 134, in run_actions
+    return self.__run_actions(session_id, message, context, max_steps, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 125, in __run_actions
+    return self.__run_actions(session_id, None, context, i - 1, verbose)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 118, in __run_actions
+    self.throw_if_action_missing(action)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/wit/wit.py", line 166, in throw_if_action_missing
+    raise WitError('unknown action: ' + action_name)
+TypeError: Can't convert 'NoneType' object to str implicitly

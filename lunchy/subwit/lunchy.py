@@ -115,7 +115,50 @@ def update_email(request):
         context.pop("missingEmail", None)
         context["emailOk"] = True
     except IntegrityError:
-        logger.info("Cannot update email %s, record already exists" % request.POST["email"])
+        logger.info("Cannot update email %s, record already exists" % first_entity_value(entities, 'email'))
         context["emailAlreadyExists"] = True
     logger.debug("** End of updating email with context: " + str(context))
+    return context
+
+def cancel_availability(request):
+    logger.debug("** Start cancelling availability... **")
+    # get the info from the bot
+    context = request['context']
+    entities = request['entities']
+    context.pop("cancelOk", None)
+
+    # check if nickname is given, else use user_name
+    nickname = first_entity_value(entities, 'contact') if entities else None
+    if nickname:
+        context["lunchy"]["nickname"] = nickname
+    else: #no contact found, use user_name
+        context["lunchy"]["nickname"] = context['user_name']
+
+    # get user date given by user or given in a previous context
+    user_date = first_entity_value(entities, 'datetime') if entities else None
+    if user_date:
+        context["lunchy"]["datetime"] = user_date
+        # remove previous error from context
+        context.pop("missingDatetime", None)
+    else:
+        logger.debug("No date given and context: " + str(context))
+        context['missingDatetime'] = True
+        return context
+
+    # parse the datetime given by user
+    avail_date = dateutil.parser.parse(context["lunchy"]["datetime"])
+
+    try:
+        # find the right availability
+        avail = Availability.objects.get(person__nickname = nickname,
+                lunch_date = avail_date)
+        # and delete the availability
+        avail_result = avail.delete()
+        logger.debug("Availability deletion result: " + str(avail_result))
+        # consider removing a lunch if no longer enough participants
+        lunch_result = handle_lunch( avail.lunch_date )
+        logger.debug("Lunch status: " + str(lunch_result))
+    except Availability.DoesNotExist:
+        logger.debug("Availability already deleted")
+    context["cancelOk"] = True
     return context

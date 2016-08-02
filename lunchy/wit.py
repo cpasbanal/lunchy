@@ -3,7 +3,7 @@ from wit import Wit
 # import modules used by wit
 # from lunchy.subwit.common import first_entity_value
 from lunchy.subwit.forecast import get_forecast
-from lunchy.subwit.lunchy import set_availability, update_email
+from lunchy.subwit.lunchy import set_availability, update_email, cancel_availability
 
 # documentation and examples on the github page
 # https://github.com/wit-ai/pywit
@@ -25,8 +25,10 @@ result = {"msg":""}
 def send(request, response):
     # print('Sending to user...', response['text'])
     logger.debug(response['text'])
-    # result["msg"] = result["msg"] + "\n" + str(response['text'])
-    result["msg"] = response["text"]
+    logger.debug(type(response['text']))
+    result["msg"] = result["msg"] + "\n" + str(response["text"]) #.decode("utf-8")
+    logger.debug(result["msg"])
+    # result["msg"] = response["text"]
 
 def merge(request):
     context = request['context']
@@ -54,6 +56,7 @@ actions = {
     'getForecast': get_forecast,
     'setAvailability': set_availability,
     'updateEmail': update_email,
+    'cancelAvailability': cancel_availability,
 }
 
 client = Wit(access_token=access_token, actions=actions)

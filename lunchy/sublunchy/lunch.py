@@ -1,5 +1,5 @@
 # import models
-from lunchy.models import Person, Availability, Appointment
+from lunchy.models import Availability, Appointment
 
 # import specific submodules
 from lunchy.sublunchy import calendar
