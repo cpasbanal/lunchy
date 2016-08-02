@@ -33,8 +33,11 @@ def set_availability(request):
     nickname = first_entity_value(entities, 'contact') if entities else None
     if nickname:
         context["lunchy"]["nickname"] = nickname
-    else: #no contact found, use user_name
-        context["lunchy"]["nickname"] = context['user_name']
+    else: #no contact found, check if not already in namespace lunchy and not None
+        if "nickname" in context["lunchy"] and not context["lunchy"]["nickname"]:
+            # then, use user_name
+            context["lunchy"]["nickname"] = context['user_name']
+    logger.debug("Availability nickname is: " + str(context["lunchy"]["nickname"]) + ". The one given in argument was: " + str(nickname))
 
     # get user date given by user or given in a previous context
     user_date = first_entity_value(entities, 'datetime') if entities else None
@@ -51,11 +54,12 @@ def set_availability(request):
         # query the database to see if user already exists (or create it)
         person, person_created = Person.objects.get_or_create(nickname = context["lunchy"]["nickname"])
         # return the user_name to the final user for cross-checking
-        context["user_name"] = person.nickname
+        context["lunchy"]["nickname"] = person.nickname
+        context["nickname"] = context["lunchy"]["nickname"]
         logger.debug("This is the person email: " + str(person.email))
         # if no email given, raise an alert to entice user to update it to get the event notification
         if person.email == "user@domain.com":
-            context['missingEmail'] = True
+            context["missingEmail"] = True
             return context
 
         # parse the datetime given by user

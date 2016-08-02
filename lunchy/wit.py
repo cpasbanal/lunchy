@@ -24,9 +24,7 @@ result = {"msg":""}
 
 def send(request, response):
     # print('Sending to user...', response['text'])
-    logger.debug(response['text'])
-    logger.debug(type(response['text']))
-    result["msg"] = result["msg"] + "\n" + str(response["text"]) #.decode("utf-8")
+    result["msg"] = result["msg"] + response["text"].decode("utf-8") + "\n"
     logger.debug(result["msg"])
     # result["msg"] = response["text"]
 
@@ -67,6 +65,8 @@ def wit_chat(session_id, text, context):
     # session_id = 'my-user-session-42'
 
     logger.debug("** calling run_actions **")
+    # reset result message
+    result["msg"] = ""
     # logger.debug("Current session: " + str(session_id))
     context = client.run_actions(session_id, text, context, max_steps=8)
     logger.debug("** after calling run_actions **")
