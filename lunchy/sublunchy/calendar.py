@@ -14,14 +14,25 @@ CLIENT_SECRET_FILE = os.getcwd() + '/randomlunch/lunchy/sublunchy/creds.p12'
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 scopes = [SCOPES]
 
-def build_service():
+def build_service(MAX_ATTEMPTS = 3):
     credentials = ServiceAccountCredentials.from_p12_keyfile(
         service_account_email=service_account_email,
         filename=CLIENT_SECRET_FILE,
         scopes=SCOPES
     )
-    # pythonanywhere uses a proxy for free users (or else you have a [Errno101] Network is unreachable error)
-    http = credentials.authorize(httplib2.Http(proxy_info = httplib2.ProxyInfo(socks.PROXY_TYPE_HTTP, 'proxy.server', 3128)))
+    # pythonanywhere uses a proxy for free users (or else you have a [Errno101] Network is unreachable error) so use ProxyInfo
+    try:
+        # try to catch error 101 network error
+        http = credentials.authorize(httplib2.Http(proxy_info = httplib2.ProxyInfo(socks.PROXY_TYPE_HTTP, 'proxy.server', 3128)))
+    except IOError:
+        # an IOError exception occurred (socket.error is a subclass)
+        # now we had the error code 101, network unreachable
+        if MAX_ATTEMPTS <= 0:
+            raise
+        else:
+            MAX_ATTEMPTS = MAX_ATTEMPTS - 1
+            build_service(MAX_ATTEMPTS)
+
     service = build('calendar', 'v3', http=http)
     return service
 

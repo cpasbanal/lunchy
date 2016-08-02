@@ -28,5 +28,4 @@ def close_session(request):
     logger.debug("Session should be cleaned up now")
     # clean up context too
     context = {}
-    context["flushOk"] = True
     return context

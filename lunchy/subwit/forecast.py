@@ -67,20 +67,29 @@ def get_forecast(request):
         when = dateutil.parser.parse(context["weather"]["datetime"])
         when.replace(hour=12)
         # get the weather for the specific date
-        w = fc.get_weather_at(when)
-        # get status for the wanted date (broken clouds, sunny...)
-        status = w.get_detailed_status()
+        try:
+            w = fc.get_weather_at(when)
+        except pyowm.exceptions.not_found_error.NotFoundError:
+            logger.debug("Date not in range")
+            context["outOfRange"] = True
+        else:
+            # get status for the wanted date (broken clouds, sunny...)
+            status = w.get_detailed_status()
+            temp = w.get_temperature(unit='celsius')
 
-        # retrieve location to be explicit in the answer
-        f = fc.get_forecast()
-        owm_loc = f.get_location()
-        precise_loc = "{}, {}".format(owm_loc.get_name(), owm_loc.get_country())
+            # retrieve location to be explicit in the answer
+            f = fc.get_forecast()
+            owm_loc = f.get_location()
+            precise_loc = "{}, {}".format(owm_loc.get_name(), owm_loc.get_country())
 
-        logger.debug("This is the status: " + str(status) + " and loc: " + precise_loc + " at " + str(when))
-        context['forecast'] = status
-        context['weather_location'] = precise_loc
+            logger.debug("This is the status: " + str(status) + " and loc: " + precise_loc +
+                " at " + str(when) + " and temp is: " + str(temp))
+            context['forecast'] = status
+            context['weather_location'] = precise_loc
+            context['temp_morning'] = round(temp['morn'])
+            context['temp_evening'] = round(temp['eve'])
 
-        # we answered the client, so delete the previous weather context
-        del context["weather"]
+            # we answered the client, so delete the previous weather context
+            del context["weather"]
     return context
 
