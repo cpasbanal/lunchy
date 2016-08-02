@@ -28,29 +28,9 @@ def send(request, response):
     logger.debug(result["msg"])
     # result["msg"] = response["text"]
 
-def merge(request):
-    context = request['context']
-    entities = request['entities']
-
-    logger.debug("** Merge was called with context: " + str(context) + " and entities: " + str(entities))
-
-    # if 'location' in context:
-    #     del context['location']
-    # location = first_entity_value(entities, 'location')
-    # if location:
-    #     context['location'] = location
-
-    # sentiment = first_entity_value(entities, 'sentiment')
-    # if sentiment:
-    #     context['ack'] = 'Glad you liked it.' if sentiment == 'positive' else 'Hmm.'
-    # elif 'ack' in context:
-    #     del context['ack']
-    return context
-
 # define all the actions wit can do
 actions = {
     'send': send,
-    'merge': merge,
     'getForecast': get_forecast,
     'setAvailability': set_availability,
     'updateEmail': update_email,
