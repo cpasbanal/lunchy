@@ -28,13 +28,16 @@ SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
 access_token = "37BV5G3TT3MUDYU7Y27EBV2AEXJGETVL"
 
 # initiate response
-result = {"msg":""}
+result = {"msg":[]}
 
 def send(request, response):
     # print('Sending to user...', response['text'])
-    result["msg"] = result["msg"] + response["text"].decode("utf-8") + "\n"
+    logger.debug("Call send...")
+    result["msg"].append({
+        "text": response["text"].decode("utf-8"),
+        "quickreplies": response.get("quickreplies", None)
+        })
     logger.debug(result["msg"])
-    # result["msg"] = response["text"]
 
 # define all the actions wit can do
 actions = {
@@ -81,7 +84,7 @@ def wit_chat(session_id, text, context):
     # session_id = 'my-user-session-42'
     logger.debug("** calling run_actions **")
     # reset result message
-    result["msg"] = ""
+    result["msg"] = []
     # logger.debug("Current session: " + str(session_id))
     context = client.run_actions(session_key, text, context, max_steps=8)
     logger.debug("** after calling run_actions **")

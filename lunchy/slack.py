@@ -42,5 +42,6 @@ def chat_message(request):
         # add mock session_id because will be treated in wit_chat, pass user_name in context
         result = wit_chat("session_id", request.POST['text'] , {"user_name":user_name})
         logger.debug("Wit answered: " + str(result))
-        return Response({"text": result["msg"], "result": result})
+        message = "\n".join([msg["text"] for msg in result["msg"]])
+        return Response({"text": message, "result": result})
     return Response({})

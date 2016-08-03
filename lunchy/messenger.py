@@ -60,6 +60,7 @@ def chat_message(request):
                 # are sent as attachments and must be handled accordingly.
                 # use the facebook API to post a message to the user
                 status = bot.send_text_message(message['sender']['id'], result["msg"])
+                # status = bot.send_quick_replies(message['sender']['id'], "Test de quick replies", [{"title":"red"},{"title":"green"}])
                 logger.debug(status)
     return Response("ok done")
 
