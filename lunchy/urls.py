@@ -1,6 +1,6 @@
 # lunchy app URL Configuration
 from django.conf.urls import url
-from lunchy import views, slack,calendar
+from lunchy import views, slack, messenger, calendar
 
 
 # Availability API
@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^api/v1/calendar/$', calendar.test_calendar),
 
     url(r'^api/v1/message/$', slack.chat_message),
+    url(r'^api/v1/messenger/$', messenger.chat_message),
 
     # url(r'^availabilities/$', views.avail_api),
     # url(r'^availabilities$', views.availability_api),

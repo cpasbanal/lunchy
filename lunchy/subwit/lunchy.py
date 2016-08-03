@@ -34,7 +34,7 @@ def set_availability(request):
     if nickname:
         context["lunchy"]["nickname"] = nickname
     else: #no contact found, check if not already in namespace lunchy and not None
-        if "nickname" in context["lunchy"] and not context["lunchy"]["nickname"]:
+        if not context["lunchy"].get("nickname", None):
             # then, use user_name
             context["lunchy"]["nickname"] = context['user_name']
     logger.debug("Availability nickname is: " + str(context["lunchy"]["nickname"]) + ". The one given in argument was: " + str(nickname))
