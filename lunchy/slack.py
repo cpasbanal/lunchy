@@ -39,7 +39,7 @@ def chat_message(request):
     user_name = request.POST['user_name']
     if not user_name == BOT_NAME:
         logger.debug("A real user is calling from Slack (not the bot)")
-        # # add mock session_id because will be treated in wit_chat, pass user_name in context
+        # add mock session_id because will be treated in wit_chat, pass user_name in context
         result = wit_chat("session_id", request.POST['text'] , {"user_name":user_name})
         logger.debug("Wit answered: " + str(result))
         return Response({"text": result["msg"], "result": result})

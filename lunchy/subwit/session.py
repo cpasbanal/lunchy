@@ -16,7 +16,7 @@ def close_session(request):
     logger.debug("** Start closing session... **")
     # get the info from the bot
     context = request['context']
-    entities = request['entities']
+    # entities = request['entities']
 
     # get the user session_key
     person = Person.objects.get(nickname = context["user_name"])
