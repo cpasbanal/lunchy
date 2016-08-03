@@ -49,7 +49,8 @@ def chat_message(request):
         # Check to make sure the received call is a message call
         # This might be delivery, optin, postback for other events
             if 'message' in message:
-                # Print the received message to the debugger
+                # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
+                # are sent as attachments and must be handled accordingly.
                 logger.debug(message["message"]["text"])
                 # Retrieve user info from facebook API
                 fbid = message['sender']['id']
@@ -57,8 +58,6 @@ def chat_message(request):
                 # add mock session_id because will be treated in wit_chat, pass user_name in context
                 result = wit_chat("session_id", message['message']['text'] , {"user_name":user_info["user_name"]})
                 logger.debug("Wit answered: " + str(result))
-        # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
-        # are sent as attachments and must be handled accordingly.
                 # use the facebook API to post a message to the user
                 for msg in result["msg"]:
                     logger.debug("This is msg: " + str(msg))
