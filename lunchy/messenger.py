@@ -52,15 +52,34 @@ def chat_message(request):
                 # Print the received message to the debugger
                 logger.debug(message["message"]["text"])
                 # Retrieve user info from facebook API
-                user_info = get_facebook_user_info(fbid = message['sender']['id'])
+                fbid = message['sender']['id']
+                user_info = get_facebook_user_info(fbid = fbid)
                 # add mock session_id because will be treated in wit_chat, pass user_name in context
                 result = wit_chat("session_id", message['message']['text'] , {"user_name":user_info["user_name"]})
                 logger.debug("Wit answered: " + str(result))
-                # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
-                # are sent as attachments and must be handled accordingly.
+        # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
+        # are sent as attachments and must be handled accordingly.
                 # use the facebook API to post a message to the user
-                status = bot.send_text_message(message['sender']['id'], result["msg"])
-                # status = bot.send_quick_replies(message['sender']['id'], "Test de quick replies", [{"title":"red"},{"title":"green"}])
+                for msg in result["msg"]:
+                    logger.debug("This is msg: " + str(msg))
+                    # reponse depends on if wit sends quickreplies
+                    if msg.get("quickreplies", None):
+                        # quickreplies must be less than or equal to 20 characters
+                        # if 2 or less quickreplies, send quick reply, else, send button
+                        if len(msg["quickreplies"]) <= 2:
+                            # send a quick reply cause short enough
+                            replies = [{"title": reply} for reply in msg["quickreplies"]]
+                            logger.debug("Replies: " + str(replies))
+                            status = bot.send_quick_replies(fbid, msg["text"], replies)
+                        else:   # send a button message
+                            buttons = [{"type":"postback",
+                                        "title":reply,
+                                        "payload":"LUNCHY_NO_PAYLOAD"}
+                                        for reply in msg["quickreplies"]
+                                    ]
+                            status = bot.send_button_message(fbid, msg["text"], buttons)
+                    else:   # simply send the plain message
+                        status = bot.send_text_message(fbid, msg["text"])
                 logger.debug(status)
     return Response("ok done")
 
