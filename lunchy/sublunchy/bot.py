@@ -71,20 +71,13 @@ class Bot():
         return self._send_payload(payload)
 
     def send_quick_replies(self, recipient_id, text, replies):
-        quick_replies = []
-        for reply in replies:
-            quick_replies.append({
-                "content_type":"text",
-                "title":reply["title"],
-                "payload":reply.get("payload","DEFAULT_PAYLOAD")
-            })
         payload = {
             'recipient': {
                 'id': recipient_id
             },
             'message': {
                 "text": text,
-                "quick_replies":quick_replies
+                "quick_replies":replies
             }
         }
         return self._send_payload(payload)

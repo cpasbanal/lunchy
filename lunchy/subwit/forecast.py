@@ -35,9 +35,10 @@ def get_forecast(request):
     # store all the context information in a specific namespace to avoid conflict
     if not "weather" in context:
         context["weather"] = {}
+    # reset forced weather variable
+    context.pop('forceWeather', None)
 
     logger.debug("** Get forecast called **")
-    # logger.debug("This is the request received: " + str(request))
 
     # Merge entities in context (location and date)
     loc = first_entity_value(entities, 'location')
@@ -53,11 +54,11 @@ def get_forecast(request):
 
     # If location and date, then return weather
     if not "location" in context.get("weather", None): # no location given
-        logger.debug("No location given and context: " + str(context))
         context['missingLocation'] = True
+        logger.debug("No location given and context: " + str(context))
     elif not "datetime" in context.get("weather", None): # no date given
-        logger.debug("No date given and context: " + str(context))
         context['missingDatetime'] = True
+        logger.debug("No date given and context: " + str(context))
     else:
         logger.debug("Everything is ok and context: " + str(context))
         # using PyOWM API described at https://github.com/csparpa/pyowm/wiki/Usage-examples

@@ -47,3 +47,8 @@ class Appointment(models.Model):
     def get_persons(self):
         return ";".join([p.nickname for p in self.persons.all()])
     get_persons.short_description = "Persons Names"
+
+class Shortcut(models.Model):
+    # define which bot quick replies should lead to a specific story (by forcing a variable to True)
+    bot_message = models.CharField(max_length=1000, unique=True)
+    variable_name = models.CharField(max_length=40)

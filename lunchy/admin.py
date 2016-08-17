@@ -16,7 +16,10 @@ class AvailabilityAdmin(admin.ModelAdmin):
 class AppointmentAdmin(admin.ModelAdmin):
     list_display = ('lunch_date', 'get_persons', 'place', 'detail', 'google_id')
 
+class ShortcutAdmin(admin.ModelAdmin):
+    list_display = ('id','bot_message','variable_name')
 
 admin.site.register(Person, PersonAdmin)
 admin.site.register(Availability, AvailabilityAdmin)
 admin.site.register(Appointment, AppointmentAdmin)
+admin.site.register(Shortcut, ShortcutAdmin)

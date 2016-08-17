@@ -24,8 +24,10 @@ SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
 
 # my quickstart test
 # access_token = "DSMDE3UL77ECC5X7TS2S75EZMANETCIE"
-# lunchy token
-access_token = "37BV5G3TT3MUDYU7Y27EBV2AEXJGETVL"
+# old lunchy token
+# access_token = "37BV5G3TT3MUDYU7Y27EBV2AEXJGETVL"
+# new ai lunchy test
+access_token = "QVPJ6U2NVQY6RFJ45XCUHQRSGLEOFB7I"
 
 # initiate response
 result = {"msg":[]}
@@ -39,6 +41,9 @@ def send(request, response):
         })
     logger.debug(result["msg"])
 
+def handle_error(request):
+    logger.debug("There was an error Wit returned action null, sorry")
+
 # define all the actions wit can do
 actions = {
     'send': send,
@@ -47,6 +52,7 @@ actions = {
     'updateEmail': update_email,
     'cancelAvailability': cancel_availability,
     'closeSession': close_session,
+    None: handle_error,
 }
 
 client = Wit(access_token=access_token, actions=actions)
@@ -70,22 +76,22 @@ def wit_chat(session_id, text, context):
     else:   # session doesn't exists so create one
         logger.debug("Session doesn't exist any more so create it")
         s.create()
-        # update session_key of the person object
-        person.session_key = s.session_key
+        # update session_key of the person object (add user_name to ease log debug in Wit)
+        person.session_key = context["user_name"] + "__" + str(s.session_key)
         person.save()
         session_key = s.session_key
 
     # get previous context and return empy dict if empty
     previous_context = s["context"] if "context" in s else {}
-    # add the user_name to the context
-    previous_context["user_name"] = context["user_name"]
     logger.debug("The previous context is: " + str(previous_context))
+    # update context with previous context
+    context.update(previous_context)
+    logger.debug("New context is: " + str(context))
 
     # session_id = 'my-user-session-42'
     logger.debug("** calling run_actions **")
     # reset result message
     result["msg"] = []
-    # logger.debug("Current session: " + str(session_id))
     context = client.run_actions(session_key, text, context, max_steps=8)
     logger.debug("** after calling run_actions **")
     logger.debug('The session state is now: ' + str(context))

@@ -104,7 +104,7 @@ def update_email(request):
     context.pop("emailOk", None)
 
     # this function should be called within the lunchy story
-    if not "lunchy" in context and "nickname" in context["lunchy"]:
+    if not ("lunchy" in context or "nickname" in context["lunchy"]):
         context['msg'] = "Désolé, mon robot s'est emmelé les pinceaux, pouvez-vous recommencer s'il vous plaît ?"
 
     # query the person object in database
