@@ -15,6 +15,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "randomlunch.settings")
 
 application = get_wsgi_application()
 
-# Append for Heroku
+# Append for Heroku import
 from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
