@@ -21,6 +21,10 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG = False
 
+import os
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_@t4e3m*uhn4vy6r&=-9#x79!@j2@loz_yi43k0p5f0l+g)01u'
