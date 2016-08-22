@@ -11,8 +11,10 @@ import requests
 # import models
 from lunchy.models import Person, Shortcut
 # import wit calls
-from lunchy.wit import wit_chat
-# impor FB Bot calls
+# from lunchy.wit import wit_chat
+# import API.ai tools
+from lunchy.apiai_connect import apiai_chat
+# import FB Bot calls
 from lunchy.sublunchy.bot import Bot
 
 # import the logging library
@@ -58,51 +60,59 @@ def chat_message(request):
                 # prepare context
                 context = {"user_name": user_info["user_name"]}
                 # check if this was a quick reply
-                if "quick_reply" in message["message"]:
-                    # get the PAYLOAD
-                    payload = message["message"]["quick_reply"]["payload"]
-                    if not payload in ["LUNCHY_NO_PAYLOAD", "DEFAULT_PAYLOAD"]:
-                        # payload is the shortcut id
-                        shortcut = Shortcut.objects.get(id = int(payload))
-                        # use the variable name to force a Wit action (see Actions tab in Wit interface)
-                        context[shortcut.variable_name] = True
-                        logger.debug("Set {} to True".format(shortcut.variable_name))
-                        logger.debug(context)
+                # if "quick_reply" in message["message"]:
+                #     # get the PAYLOAD
+                #     payload = message["message"]["quick_reply"]["payload"]
+                #     if not payload in ["LUNCHY_NO_PAYLOAD", "DEFAULT_PAYLOAD"]:
+                #         # payload is the shortcut id
+                #         shortcut = Shortcut.objects.get(id = int(payload))
+                #         # use the variable name to force a Wit action (see Actions tab in Wit interface)
+                #         context[shortcut.variable_name] = True
+                #         logger.debug("Set {} to True".format(shortcut.variable_name))
+                #         logger.debug(context)
 
                 # add mock session_id because will be treated in wit_chat
-                result = wit_chat("session_id", message['message']['text'] , context)
-                logger.debug("Wit answered: " + str(result))
+                # result = wit_chat("session_id", message['message']['text'] , context)
+                # logger.debug("Wit answered: " + str(result))
 
                 # use the facebook API to post a message to the user
-                for msg in result["msg"]:
-                    logger.debug("This is msg: " + str(msg))
-                    # reponse depends on if wit sends quickreplies
-                    if msg.get("quickreplies", None):
-                        # prepare payload to force story when user answer with a quick reply
-                        # query all the quickreplies to avoid multiple queries
-                        shortcuts = Shortcut.objects.filter(bot_message__in = msg["quickreplies"])
-                        # quickreplies must be less than or equal to 20 characters
-                        # if 2 or less quickreplies, send quick reply, else, send button
-                        pl = lambda reply: next( (sc.id for sc in shortcuts if sc.bot_message == reply), "LUNCHY_NO_PAYLOAD")
-                        if len(msg["quickreplies"]) <= 2:
-                            # send a quick reply cause short enough
-                            replies = [{"content_type": "text",
-                                        "title": reply,
-                                        "payload": pl(reply) }
-                                        for reply in msg["quickreplies"]
-                                    ]
-                            logger.debug("Replies: " + str(replies))
-                            status = bot.send_quick_replies(fbid, msg["text"], replies)
-                        else:   # send a button message
-                            buttons = [{"type": "postback",
-                                        "title": reply,
-                                        "payload": pl(reply)}
-                                        for reply in msg["quickreplies"]
-                                    ]
-                            status = bot.send_button_message(fbid, msg["text"], buttons)
-                    else:   # simply send the plain message
-                        status = bot.send_text_message(fbid, msg["text"])
+                # for msg in result["msg"]:
+                #     logger.debug("This is msg: " + str(msg))
+                #     # reponse depends on if wit sends quickreplies
+                #     if msg.get("quickreplies", None):
+                #         # prepare payload to force story when user answer with a quick reply
+                #         # query all the quickreplies to avoid multiple queries
+                #         shortcuts = Shortcut.objects.filter(bot_message__in = msg["quickreplies"])
+                #         # quickreplies must be less than or equal to 20 characters
+                #         # if 2 or less quickreplies, send quick reply, else, send button
+                #         pl = lambda reply: next( (sc.id for sc in shortcuts if sc.bot_message == reply), "LUNCHY_NO_PAYLOAD")
+                #         if len(msg["quickreplies"]) <= 2:
+                #             # send a quick reply cause short enough
+                #             replies = [{"content_type": "text",
+                #                         "title": reply,
+                #                         "payload": pl(reply) }
+                #                         for reply in msg["quickreplies"]
+                #                     ]
+                #             logger.debug("Replies: " + str(replies))
+                #             status = bot.send_quick_replies(fbid, msg["text"], replies)
+                #         else:   # send a button message
+                #             buttons = [{"type": "postback",
+                #                         "title": reply,
+                #                         "payload": pl(reply)}
+                #                         for reply in msg["quickreplies"]
+                #                     ]
+                #             status = bot.send_button_message(fbid, msg["text"], buttons)
+                #     else:   # simply send the plain message
+                #         status = bot.send_text_message(fbid, msg["text"])
+                # logger.debug(status)
+
+                # connect with api.ai
+                result = apiai_chat("session_id", message['message']['text'] , {})
+                logger.debug(result)
+
+                status = bot.send_text_message(fbid, result["result"]["fulfillment"]["speech"])
                 logger.debug(status)
+
     return Response("ok done")
 
 def get_facebook_user_info(fbid):
