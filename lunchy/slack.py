@@ -8,7 +8,9 @@ from rest_framework.response import Response
 # from lunchy.models import Person
 
 # import wit calls
-from lunchy.wit import wit_chat
+# from lunchy.wit import wit_chat
+# import API.ai tools
+from lunchy.apiai_connect import apiai_chat
 
 
 # slack bot tutorial
@@ -40,8 +42,12 @@ def chat_message(request):
     if not user_name == BOT_NAME:
         logger.debug("A real user is calling from Slack (not the bot)")
         # add mock session_id because will be treated in wit_chat, pass user_name in context
-        result = wit_chat("session_id", request.POST['text'] , {"user_name":user_name})
-        logger.debug("Wit answered: " + str(result))
-        message = "\n".join([msg["text"] for msg in result["msg"]])
+        # result = wit_chat("session_id", request.POST['text'] , {"user_name":user_name})
+        # logger.debug("Wit answered: " + str(result))
+
+        result = apiai_chat("session_id", request.POST['text'] , {})
+        logger.debug("Api.ai answered: " + str(result))
+
+        message =  result["result"]["fulfillment"]["speech"]
         return Response({"text": message, "result": result})
     return Response({})

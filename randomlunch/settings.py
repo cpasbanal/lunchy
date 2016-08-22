@@ -158,15 +158,18 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': '/home/cpasbanal/randomlunch/lunchy/lunchy.log',
         },
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
     },
     'loggers': {
         'lunchy': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
             'level': 'DEBUG',
             'propagate': True,
         },
         'django': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
             'level': 'DEBUG',
             'propagate': True,
         },
