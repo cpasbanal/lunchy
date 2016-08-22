@@ -31,7 +31,9 @@ def get_forecast(parameters):
         logger.debug("No location given")
         return "Dans quelle ville et quel pays ?"
     user_date = parameters.get("date", None)
-    logger.debug(user_date)
+    logger.debug("Parameters: " + str(parameters))
+    logger.debug("User_date:" + str(user_date))
+    # logger.debug(user_date)
     # logger.debug(user_date.get("rfcString", None))
     if user_date is None or len(user_date) == 0:
         logger.debug("No date given")
@@ -43,9 +45,9 @@ def get_forecast(parameters):
     fc = owm.daily_forecast(loc, limit=5)
     # change when to noon to be more precise (probably asked for midnight otherwise)
     try:
-        when = dateutil.parser.parse(user_date.get("rfcString", None))
-    except:
         when = dateutil.parser.parse(user_date)
+    except:
+        when = dateutil.parser.parse(user_date.get("rfcString", None))
     logger.debug("When: " + str(when))
     when.replace(hour=12, minute=0)
     # get the weather for the specific date

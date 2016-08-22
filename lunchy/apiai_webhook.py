@@ -32,9 +32,9 @@ def webhook(request):
     logger.debug("Webhook called")
     # recover the POST parameters
     data = request.data
-    logger.debug(data)
+    # logger.debug(data)
     result = data.get('result', None)
-    logger.debug(result)
+    # logger.debug(result)
     if result is None:
         return Response({})
     parameters = result.get("parameters")
