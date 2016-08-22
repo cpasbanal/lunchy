@@ -370,3 +370,24 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<Reg
 Not Found: /favicon.ico
 ** Messenger API was called **
 <QueryDict: {}>
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 131, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 32, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+(0.011) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'f1nj6eq6unx1frkg7dgsqqx6d20k0an3' AND "django_session"."expire_date" > '2016-08-22 13:25:23.666416'); args=('f1nj6eq6unx1frkg7dgsqqx6d20k0an3', '2016-08-22 13:25:23.666416')
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Webhook called
+{'id': '3defdca2-bb83-471e-b005-1f111669a53d', 'status': {'errorType': 'success', 'code': 200}, 'result': {'score': 1, 'resolvedQuery': "Quelle est la météo à Paris aujourd'hui ?", 'fulfillment': {'data': {}, 'speech': 'Désolé, nous avons rencontré un petit problème...', 'source': 'OWM', 'displayText': 'Désolé, nous avons rencontré un petit problème...'}, 'parameters': {'date': '2016-08-22', 'geo-city': 'Paris'}, 'metadata': {'webhookUsed': 'true', 'intentId': '50958f66-ac2f-4f7b-8d6a-8b61462a2866', 'intentName': 'weather - 0 - ask for weather'}, 'action': 'getForecast', 'actionIncomplete': False, 'contexts': [{'name': 'weather', 'parameters': {'date': '2016-08-22', 'date.original': "aujourd'hui", 'geo-city.original': 'Paris', 'geo-city': 'Paris'}, 'lifespan': 5}], 'source': 'agent'}, 'timestamp': '2016-08-22T13:42:00.07Z', 'sessionId': 'bc94438b-c7f7-40de-a0c8-51646259359b'}
+{'score': 1, 'resolvedQuery': "Quelle est la météo à Paris aujourd'hui ?", 'fulfillment': {'data': {}, 'speech': 'Désolé, nous avons rencontré un petit problème...', 'source': 'OWM', 'displayText': 'Désolé, nous avons rencontré un petit problème...'}, 'parameters': {'date': '2016-08-22', 'geo-city': 'Paris'}, 'metadata': {'webhookUsed': 'true', 'intentId': '50958f66-ac2f-4f7b-8d6a-8b61462a2866', 'intentName': 'weather - 0 - ask for weather'}, 'action': 'getForecast', 'actionIncomplete': False, 'contexts': [{'name': 'weather', 'parameters': {'date': '2016-08-22', 'date.original': "aujourd'hui", 'geo-city.original': 'Paris', 'geo-city': 'Paris'}, 'lifespan': 5}], 'source': 'agent'}
+** Get forecast called **
+2016-08-22
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/core/handlers/base.py", line 131, in get_response
+    response = middleware_method(request, response)
+  File "/home/cpasbanal/.virtualenvs/django19/lib/python3.5/site-packages/django/middleware/clickjacking.py", line 32, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'

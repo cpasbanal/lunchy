@@ -32,7 +32,7 @@ def get_forecast(parameters):
         return "Dans quelle ville et quel pays ?"
     user_date = parameters.get("date", None)
     logger.debug(user_date)
-    logger.debug(user_date.get("rfcString", None))
+    # logger.debug(user_date.get("rfcString", None))
     if user_date is None or len(user_date) == 0:
         logger.debug("No date given")
         return
@@ -42,13 +42,18 @@ def get_forecast(parameters):
     # get weather forceast for the next 5 days in the required location
     fc = owm.daily_forecast(loc, limit=5)
     # change when to noon to be more precise (probably asked for midnight otherwise)
-    when = dateutil.parser.parse(user_date.get("rfcString", None))
+    try:
+        when = dateutil.parser.parse(user_date.get("rfcString", None))
+    except:
+        when = dateutil.parser.parse(user_date)
+    logger.debug("When: " + str(when))
     when.replace(hour=12, minute=0)
     # get the weather for the specific date
     try:
         w = fc.get_weather_at(when)
     except pyowm.exceptions.not_found_error.NotFoundError:
         logger.debug("Date not in range")
+        return "Pouvez-vous redonner une date d'ici 5 jours max ?"
         # context["outOfRange"] = True
     else:
         # get status for the wanted date (broken clouds, sunny...)
