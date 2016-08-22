@@ -108,6 +108,7 @@ def chat_message(request):
 
                 # connect with api.ai
                 result = apiai_chat("session_id", message['message']['text'] , {})
+                logger.debug("api.ai message response:")
                 logger.debug(result)
 
                 status = bot.send_text_message(fbid, result["result"]["fulfillment"]["speech"])
