@@ -160,7 +160,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/cpasbanal/randomlunch/lunchy/lunchy.log',
+            'filename': os.path.join(BASE_DIR, "lunchy.log"),
         },
         'console': {
             'class': 'logging.StreamHandler',
