@@ -7,7 +7,9 @@ Needed for Heroku deployment
 """
 
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite')
+}
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
